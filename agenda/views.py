@@ -104,6 +104,7 @@ def horarios_list(request):
        count = count+1   
      if count == 0: #se não existir, popular lista de horários disponíveis
       hr = f"{data} {horario.hour}:{horario.minute}"
+      hr = datetime.strptime(hr, "%Y-%m-%d %H:%M")
       hr_disp.append(hr)
       
      horario = horario + timedelta(minutes = 30)
@@ -118,6 +119,7 @@ def horarios_list(request):
         count = count+1   
       if count == 0:
        hr = f"{data} {horario.hour}:{horario.minute}"
+       hr = datetime.strptime(hr, "%Y-%m-%d %H:%M")
        hr_disp.append(hr)
       
       horario = horario + timedelta(minutes = 30)

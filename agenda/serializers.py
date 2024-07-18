@@ -16,7 +16,7 @@ class AgendamentoSerializer(serializers.ModelSerializer):
         if value < timezone.now():
            raise serializers.ValidationError("Agendamento não pode ser feito no passado!")
        
-        elif value.minute % 30 != 0:
+        elif value.minute % 30 != 0: #só permite que horários sejam cadastrados com minutos iguais  00 ou 30
            raise serializers.ValidationError("Horário inválido")
        
         elif value.weekday() == 6:
