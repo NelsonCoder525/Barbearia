@@ -12,11 +12,13 @@ from django.utils import timezone
 
 @api_view(http_method_names=["GET", "PATCH", "DELETE"])
 def agendamento_detail(request, id):
+    #trazer agendamento detalhado:
     obj = get_object_or_404(Agendamento, id=id)
     if request.method == "GET":
       
       serializer = AgendamentoSerializer(obj)
       return JsonResponse(serializer.data)
+    #editar agendamento:
     if request.method == "PATCH":
       serializer = AgendamentoSerializer(obj, data=request.data, partial=True)
       if obj.cancelamento_agendamento == True:
@@ -36,8 +38,8 @@ def agendamento_detail(request, id):
         serializer.save()
         return JsonResponse(serializer.data, status=200)
       return JsonResponse(serializer.errors, status=400)
+    #cancelar agendamento:
     if request.method == "DELETE":
-      #obj.delete()
       obj.cancelamento_agendamento = True
       obj.save()
       return Response(status=204)
@@ -82,30 +84,48 @@ def horarios_list(request):
   data = request.query_params.get("data")
   data = datetime.fromisoformat(data).date()
   
+  #verificar se a data está no passado:
+  if data < date.today():
+    raise serializers.ValidationError("Não há horários disponíveis no passado!")
+  
+  #trazer todos os agendamentos para comparação:
   qs = Agendamento.objects.filter(cancelamento_agendamento=False)
-  #serializer = AgendamentoSerializer(qs, many=True)
-  
-  
-  
+ 
   horario = "09:00"
-  horario = datetime.strptime(horario, "%H:%M")
-  hr_disp = []
+  horario = datetime.strptime(horario, "%H:%M")  
+  hr_disp = [] #lista de horários disponíveis a ser populada
   
-  while horario.hour < 18:
+  
+  if data.weekday() < 5: #verifica se for meio da semana
+   while horario.hour < 18:
      count = 0
      for ag in qs:
-      if ag.data_horario.date()==data and ag.data_horario.hour == horario.hour and ag.data_horario.minute == horario.minute:
+      if ag.data_horario.date()==data and ag.data_horario.hour == horario.hour and ag.data_horario.minute == horario.minute: #verifica se existe algum agendamento no horário corrente da iteração
        count = count+1   
-     if count == 0:
+     if count == 0: #se não existir, popular lista de horários disponíveis
       hr = f"{data} {horario.hour}:{horario.minute}"
       hr_disp.append(hr)
       
      horario = horario + timedelta(minutes = 30)
+     if horario.hour == 12: #verifica se o horário está dentro do almoço
+       horario = horario + timedelta(hours = 1) #se almoço, pula 1h
+       
+  elif data.weekday() == 5: #verifica se é sábado
+    while horario.hour < 13:
+      count = 0
+      for ag in qs:
+       if ag.data_horario.date()==data and ag.data_horario.hour == horario.hour and ag.data_horario.minute == horario.minute:
+        count = count+1   
+      if count == 0:
+       hr = f"{data} {horario.hour}:{horario.minute}"
+       hr_disp.append(hr)
+      
+      horario = horario + timedelta(minutes = 30)
     
+  elif data.weekday() == 6: #verifica se é domingo
+    raise serializers.ValidationError("Sem horários disponíveis no domingo")      
     
-    
-    
-  return JsonResponse(hr_disp, safe=False)    
+  return JsonResponse(hr_disp, safe=False)    #retorna lista de horários disponíveis
   
   
   

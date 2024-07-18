@@ -23,7 +23,7 @@ class AgendamentoSerializer(serializers.ModelSerializer):
            raise serializers.ValidationError("Barbearia fechada aos domingos") 
         
         elif value.weekday()!=5 and (value.hour < 9 or value.hour > 17 or value.hour == 12) :
-             raise serializers.ValidationError("Barbearia fechada")
+             raise serializers.ValidationError("Barbearia fechada para almoço")
          
         elif value.weekday()==5 and (value.hour < 9 or value.hour > 12):
              raise serializers.ValidationError("Barbearia fechada, sábado fecha às 13h")
