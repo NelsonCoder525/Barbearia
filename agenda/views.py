@@ -24,20 +24,21 @@ def agendamento_detail(request, id):
       if obj.cancelamento_agendamento == True:
          raise serializers.ValidationError("Agendamento já foi cancelado, impossível alterar")
       
-      if serializer.is_valid():
-        
-        dt = datetime.strptime(request.data['data_horario'], "%Y-%m-%d %H:%M:%S")
-        todos_agendamentos = Agendamento.objects.filter(cancelamento_agendamento=False)
+      if not serializer.is_valid():
+        return JsonResponse(serializer.errors, status=400)
+      
+      dt = datetime.strptime(request.data['data_horario'], "%Y-%m-%d %H:%M:%S")
+      todos_agendamentos = Agendamento.objects.filter(cancelamento_agendamento=False)
 
-        for agendamento in todos_agendamentos:
+      for agendamento in todos_agendamentos:
           if obj.id != agendamento.id: 
             agendamento.data_horario = agendamento.data_horario.replace(tzinfo=None)          
             if dt == agendamento.data_horario:
              raise serializers.ValidationError("Horário já ocupado")
         
-        serializer.save()
-        return JsonResponse(serializer.data, status=200)
-      return JsonResponse(serializer.errors, status=400)
+      serializer.save()
+      return JsonResponse(serializer.data, status=200)
+      
     #cancelar agendamento:
     if request.method == "DELETE":
       obj.cancelamento_agendamento = True
@@ -57,26 +58,28 @@ def agendamento_list(request):
        serializer = AgendamentoSerializer(data=data)
        print(data)
        
-       if serializer.is_valid():
-        agendamentos_cliente = Agendamento.objects.filter(email_cliente = data['email_cliente'])
-        dt = datetime.strptime(data['data_horario'], "%Y-%m-%d %H:%M:%S")
+       if not serializer.is_valid():
+        return JsonResponse(serializer.errors, status=400)
+         
+       agendamentos_cliente = Agendamento.objects.filter(email_cliente = data['email_cliente'])
+       dt = datetime.strptime(data['data_horario'], "%Y-%m-%d %H:%M:%S")
                 
-        for agendamento in agendamentos_cliente:            
+       for agendamento in agendamentos_cliente:            
                 if agendamento.data_horario.date() == dt.date():
                   raise serializers.ValidationError("Apenas um agendamento por dia")
         
-        todos_agendamentos = Agendamento.objects.filter(cancelamento_agendamento=False)
-        for agendamento in todos_agendamentos:
+       todos_agendamentos = Agendamento.objects.filter(cancelamento_agendamento=False)
+       for agendamento in todos_agendamentos:
            agendamento.data_horario = agendamento.data_horario.replace(tzinfo=None)
            
            if dt == agendamento.data_horario:
              raise serializers.ValidationError("Horário já ocupado")
            
         
-        serializer.save()
+       serializer.save()
         
-        return JsonResponse(serializer.data, status=201)
-       return JsonResponse(serializer.errors, status=400)
+       return JsonResponse(serializer.data, status=201)
+       
      
      
 @api_view(http_method_names=["GET"])
