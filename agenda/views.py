@@ -152,7 +152,7 @@ def fidelizacoes_list(self):
              
                  
           
-          return JsonResponse(display, safe = False)#RETORNA O DICIONÁRIO NA VIEW             
+          return JsonResponse(display, safe = False)#RETORNA A LISTA DE STRINGS COM AS INFORMAÇÕES DOS PONTOS DE FIDELIDADE NA VIEW             
                         
 
      
