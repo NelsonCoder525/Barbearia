@@ -1,86 +1,160 @@
-from django.shortcuts import render
 from django.shortcuts import get_object_or_404
+from django.core.serializers import serialize
 from django.http import JsonResponse
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from agenda.models import Agendamento
-from datetime import datetime, timedelta, time, date
-from agenda.serializers import AgendamentoSerializer
+from agenda.models import Agendamento, Cliente, Fidelidade
+from datetime import datetime, timedelta, timezone, date
+from agenda.serializers import AgendamentoSerializer, PrestadorSerializer, ClienteSerializer, FidelidadeSerializer
 from rest_framework import serializers
-from django.utils import timezone
+from rest_framework.views import APIView
+from rest_framework import mixins
+from rest_framework import generics, permissions
+from django.contrib.auth.models import User
+import json
+
+
 # Create your views here.
 
-@api_view(http_method_names=["GET", "PATCH", "DELETE"])
-def agendamento_detail(request, id):
-    #trazer agendamento detalhado:
-    obj = get_object_or_404(Agendamento, id=id)
-    if request.method == "GET":
-      
-      serializer = AgendamentoSerializer(obj)
-      return JsonResponse(serializer.data)
-    #editar agendamento:
-    if request.method == "PATCH":
-      serializer = AgendamentoSerializer(obj, data=request.data, partial=True)
-      if obj.cancelamento_agendamento == True:
-         raise serializers.ValidationError("Agendamento já foi cancelado, impossível alterar")
-      
-      if not serializer.is_valid():
-        return JsonResponse(serializer.errors, status=400)
-      
-      dt = datetime.strptime(request.data['data_horario'], "%Y-%m-%d %H:%M:%S")
-      todos_agendamentos = Agendamento.objects.filter(cancelamento_agendamento=False)
-
-      for agendamento in todos_agendamentos:
-          if obj.id != agendamento.id: 
-            agendamento.data_horario = agendamento.data_horario.replace(tzinfo=None)          
-            if dt == agendamento.data_horario:
-             raise serializers.ValidationError("Horário já ocupado")
-        
-      serializer.save()
-      return JsonResponse(serializer.data, status=200)
-      
-    #cancelar agendamento:
-    if request.method == "DELETE":
-      obj.cancelamento_agendamento = True
-      obj.save()
-      return Response(status=204)
-  
-  
-@api_view(http_method_names=["GET", "POST"])
-def agendamento_list(request):
-    if request.method == "GET":
-      qs = Agendamento.objects.filter(cancelamento_agendamento=False)
-      serializer = AgendamentoSerializer(qs, many=True)
-      return JsonResponse(serializer.data, safe=False)
-    
+"""Perimssões:
+-Qualquer cliente (autenticado ou não) seja capaz de criar um Agendamento
+-Apenas o prestador de serviço pode visualizar todos os agendamentos em sua agenda
+-Apenas o prestador de serviço pode manipular os seus agendamentos
+"""
+class IsOwnerOrCreateOnly(permissions.BasePermission):
+  def has_permission(self, request, view):
     if request.method == "POST":
-       data = request.data
-       serializer = AgendamentoSerializer(data=data)
-       print(data)
-       
-       if not serializer.is_valid():
-        return JsonResponse(serializer.errors, status=400)
+      return True
+    username = request.query_params.get("username", None)
+    if request.user.username == username:
+      return True
+    return False
+    
+
+class IsPrestador(permissions.BasePermission):
+  def has_object_permission(self, request, view, obj):
+    if obj.prestador == request.user:
+      return True
+    return False
+  
+ 
+
+class IsSuperUser(permissions.BasePermission):
+  def has_permission(self, request, view):
+    if request.user.is_superuser == True:
+      return True
+    return False
+
+
+
+
+class AgendamentoDetail(generics.RetrieveUpdateDestroyAPIView): #/api/agendamentos/<pk>/
+  queryset = Agendamento.objects.all()
+  serializer_class = AgendamentoSerializer
+  permission_classes = [IsSuperUser]
+
+class AgendamentoList(generics.ListCreateAPIView):   #classe genérica   
+  queryset = Agendamento.objects.filter(estado_agendamento = 'CO')  
+  serializer_class = AgendamentoSerializer
+  permission_classes = [IsOwnerOrCreateOnly]
+  
+  def get_queryset(self):
+    username = self.request.query_params.get("username", None)
+    queryset = Agendamento.objects.filter(prestador__username = username, estado_agendamento = 'CO')
+    
+    return queryset
+ 
+class PrestadorList(generics.ListAPIView #/api/agendamentos/?username
+   ):   #classe genérica
+  
+  serializer_class = PrestadorSerializer
+  queryset = User.objects.all()
+  
+  permission_classes = [IsSuperUser]
+
+class ClienteList(generics.ListCreateAPIView #/api/clientes/
+   ):   #classe genérica
+  
+  serializer_class = ClienteSerializer
+  queryset = Cliente.objects.all()
+  
+  permission_classes = [IsSuperUser] 
+  
+class ClienteDetail(generics.RetrieveUpdateDestroyAPIView): #/api/clientes/<pk>/
+  queryset = Cliente.objects.all()
+  serializer_class = ClienteSerializer
+  permission_classes = [IsSuperUser]
+  
+class FidelidadeDetail(generics.RetrieveUpdateDestroyAPIView #/api/fidelidade/<pk>
+   ):   #classe genérica
+    
+  serializer_class = FidelidadeSerializer
+  queryset = Fidelidade.objects.all()
+  permission_classes = [IsSuperUser]  
+
+@api_view(http_method_names=["GET"])
+def fidelizacoes_list(self):
+
          
-       agendamentos_cliente = Agendamento.objects.filter(email_cliente = data['email_cliente'])
-       dt = datetime.strptime(data['data_horario'], "%Y-%m-%d %H:%M:%S")
-                
-       for agendamento in agendamentos_cliente:            
-                if agendamento.data_horario.date() == dt.date():
-                  raise serializers.ValidationError("Apenas um agendamento por dia")
-        
-       todos_agendamentos = Agendamento.objects.filter(cancelamento_agendamento=False)
-       for agendamento in todos_agendamentos:
-           agendamento.data_horario = agendamento.data_horario.replace(tzinfo=None)
-           
-           if dt == agendamento.data_horario:
-             raise serializers.ValidationError("Horário já ocupado")
-           
-        
-       serializer.save()
-        
-       return JsonResponse(serializer.data, status=201)
-       
-     
+          todos_agendamentos = Agendamento.objects.filter(estado_agendamento="EX")#TRAZ TODOS AGENDAMENTOS EXECUTADOS
+          todos_clientes = Cliente.objects.all()#TRAZ TODOS OS CLIENTES
+          todas_fidelizacoes = Fidelidade.objects.all()#TRAZ TODAS AS FIDELIZAÇÕES JÁ REALIZADAS
+          todos_prestadores = User.objects.all()#TRAZ TODOS OS PRESTADORES
+          
+          
+          
+          #VERIFICAÇÃO SE O E-MAIL PERTENCE A UM CLIENTE CADASTRADO:
+          for clientes in todos_clientes: #VERIFICA CADA UM DOS CLIENTES CADASTRADOS
+            for agendamento in todos_agendamentos: #PARA CADA CLIENTE, TRAZ CADA AGENDAMENTO QUE ESTEJA MARCADO COMO EXECUTADO
+             if agendamento.email_cliente == clientes.email: #VERIFICA SE O E-MAIL DO CLIENTE BATE COM O E-MAIL DO AGENDAMENTO
+               if Fidelidade.objects.all() ==  []: #VERIFICA SE A TABELA DE FIDELIZAÇÕES ESTÁ VAZIA
+                 cl = Cliente.objects.filter(email=clientes.email)#TRAZ O CLIENTE CUJO E-MAIL SEJA O MESMO E-MAIL DO CLIENTE QUE ESTÁ SENDO VERIFICADO NESTA ITERAÇÃO DO LAÇO FOR
+                 ag = Agendamento.objects.filter(pk=agendamento.pk)#TRAZ O AGENDAMENTO CUJO ID SEJA O MESMO DO AGENDAMENTO DESTA ITERAÇÃO DO LAÇO FOR
+                 Fidelidade.objects.create(cliente = cl[0], prestador_fidelidade = agendamento.prestador, agendamento_id = ag[0]) #GRAVA NA TABELA FIDELIDADE
+               else: #CASO A TABELA FIDELDIADE NÃO ESTEJA VAZIA
+               
+                count = 0 #CONTADOR COMEÇANDO EM ZERO
+                for fidel in todas_fidelizacoes: #VERIFICA CADA UMA DAS FIDELIZAÇÕES EXISTENTES
+                 
+                 if fidel.agendamento_id.pk == agendamento.pk: #VERIFICA SE O AGENDAMENTO QUE ESTÁ GERANDO A FIDELIZAÇÃO JÁ EXISTE NA TABELA FIDELIDADE
+                   count +=1 #SE EXISTIR, AUMENTA O CONTADOR
+                   
+                 
+          
+                 
+                if count<1: #FORA DO FOR DE FIDELIDADE, VERIFICA SE O CONTADOR CONTINUA ZERADO (OU SEJA, ESTA FIDELIZAÇÃO É INÉDITA E PODE SER GRAVADA)
+                    
+                    cl = Cliente.objects.filter(email=clientes.email)#TRAZ O CLIENTE CUJO E-MAIL SEJA O MESMO E-MAIL DO CLIENTE QUE ESTÁ SENDO VERIFICADO NESTA ITERAÇÃO DO LAÇO FOR
+                    ag = Agendamento.objects.filter(pk=agendamento.pk)#TRAZ O AGENDAMENTO CUJO ID SEJA O MESMO DO AGENDAMENTO DESTA ITERAÇÃO DO LAÇO FOR
+                    Fidelidade.objects.create(cliente = cl[0], prestador_fidelidade = agendamento.prestador, agendamento_id = ag[0])#GRAVA NA TABELA FIDELIDADE
+                  
+          fidelizacoes = Fidelidade.objects.all()#TRAZ TODAS AS FIDELIZAÇÕES
+          serialized_data = serialize("json", fidelizacoes) #SERIALIZA O QUERYSET EM JSON
+          serialized_data = json.loads(serialized_data) #TRANSFORMA O JSON EM DICIONÁRIO
+          
+          fidel_list = []
+          for fidel in todas_fidelizacoes: 
+            fidel_str = f"Fidelização nº{fidel.pk}, Cliente: {fidel.cliente.nome}, Prestador: {fidel.prestador_fidelidade}, Agendamento (ID): {fidel.agendamento_id.pk}" 
+            fidel_list.append(fidel_str)  
+          
+          
+          display = []
+          for client in todos_clientes:
+            
+            for prest in todos_prestadores:
+              contador = 0
+              for fidel in todas_fidelizacoes:
+                if fidel.cliente == client and fidel.prestador_fidelidade == prest:
+                  contador +=1
+              if contador>0:
+               display_str = f"Cliente {client.nome} possui {contador} pontos de fidelidade com prestador {prest.username}"
+               display.append(display_str)
+             
+                 
+          
+          return JsonResponse(display, safe = False)#RETORNA O DICIONÁRIO NA VIEW             
+                        
+
      
 @api_view(http_method_names=["GET"])
 def horarios_list(request):
@@ -92,7 +166,7 @@ def horarios_list(request):
     raise serializers.ValidationError("Não há horários disponíveis no passado!")
   
   #trazer todos os agendamentos para comparação:
-  qs = Agendamento.objects.filter(cancelamento_agendamento=False)
+  qs = Agendamento.objects.filter(estado_agendamento = 'CO')
  
   horario = "09:00"
   horario = datetime.strptime(horario, "%H:%M")  
