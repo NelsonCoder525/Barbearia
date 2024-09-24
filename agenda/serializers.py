@@ -41,6 +41,7 @@ class AgendamentoSerializer(serializers.ModelSerializer):
         email_cliente = request.get("email_cliente", "")
         dt = request.get("data_horario", "")
         prestador_cliente = request.get("prestador", "")
+        estado_agendamento_request = request.get("estado_agendamento", "")
         
          
         req = self.context.get('request')
@@ -82,34 +83,31 @@ class AgendamentoSerializer(serializers.ModelSerializer):
         if request and req.method == 'PATCH':
            instance = self.instance
            id = instance.id #TRAZ O ID DO AGENDAMENTO QUE ESTOU MODIFICANDO
-           if dt != "":
-              dt = datetime.strptime(dt, "%Y-%m-%d %H:%M:%S")
-           
-           print(f"id:   {id}")
+          
            
            agendamentos_cliente = Agendamento.objects.filter(email_cliente = instance.email_cliente, estado_agendamento = 'CO')  #TRAZ TODOS AGENDAMENTOS CONFIRMADOS COM O E-MAIL INFORMADO NA REQUISIÇÃO 
            #VALIDAÇÃO DE APENAS UM AGENDAMENTO POR DIA PARA O MESMO E-MAIL
            for agendamento in agendamentos_cliente: 
              if dt != "":           
-                if agendamento.data_horario.date() == dt.date() and  id != agendamento.pk:
+                if agendamento.data_horario.date() == dt.date() and  id != agendamento.pk and estado_agendamento_request != 'AG' and estado_agendamento_request != 'CA' and estado_agendamento_request != "":
                   raise serializers.ValidationError("Apenas um agendamento por dia")
              else:
                dt_instance = instance.data_horario
-               if agendamento.data_horario.date() == dt_instance.date() and  id != agendamento.pk:
+               if agendamento.data_horario.date() == dt_instance.date() and  id != agendamento.pk and estado_agendamento_request != 'AG' and estado_agendamento_request != 'CA' and estado_agendamento_request != "":
                   raise serializers.ValidationError("Apenas um agendamento por dia")
            
            todos_agendamentos = Agendamento.objects.filter(estado_agendamento = 'CO')#TRAZ TODOS AGENDAMENTOS CONFIRMADOS
            #VALIDAÇÃO DE HORÁRIO JÁ OCUPADO
            for agendamento in todos_agendamentos:
               if dt != "": 
-                 if dt == agendamento.data_horario and id != agendamento.pk:
+                 
+                 if dt == agendamento.data_horario and id != agendamento.pk and estado_agendamento_request != 'AG' and estado_agendamento_request != 'CA' and estado_agendamento_request != "":
                  
                     raise serializers.ValidationError("Horário já ocupado")
               else:
                   dt_instance = instance.data_horario
-                  if dt_instance == agendamento.data_horario and id != agendamento.pk:
-                 
-                        raise serializers.ValidationError("Horário já ocupado")
+                  if dt_instance == agendamento.data_horario and id != agendamento.pk and estado_agendamento_request != 'AG' and estado_agendamento_request != 'CA' and estado_agendamento_request != "":
+                     raise serializers.ValidationError("Horário já ocupado")
            
            
            if telefone_cliente != "": #CONDICIONAL PARA CASO O TELEFONE ESTEJA SENDO MODIFICADO
