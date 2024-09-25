@@ -27,12 +27,7 @@ class AgendamentoSerializer(serializers.ModelSerializer):
          
         elif value.weekday()==5 and (value.hour < 9 or value.hour > 12):
              raise serializers.ValidationError("Barbearia fechada, sábado fecha às 13h")
-            
-        
-        
-        
-       
-       
+         
         return value
      
      
@@ -40,42 +35,38 @@ class AgendamentoSerializer(serializers.ModelSerializer):
         telefone_cliente = request.get("telefone_cliente", "")
         email_cliente = request.get("email_cliente", "")
         dt = request.get("data_horario", "")
-        prestador_cliente = request.get("prestador", "")
         estado_agendamento_request = request.get("estado_agendamento", "")
-        
-         
+                 
         req = self.context.get('request')
         
-        if request and req.method == 'POST':
-           #VALIDAÇÃO DO TELEFONE 
-           tel = list(telefone_cliente)  
-        
-           for x in tel:
-              if x.isnumeric() == False and x !="(" and x !=")" and x !="+" and x!="-":
+        if telefone_cliente != "" or req.method == 'POST':
+            tel = list(telefone_cliente)
+            for x in tel:
+             if x.isnumeric() == False and x !="(" and x !=")" and x !="+" and x!="-":
                print(x)
                raise serializers.ValidationError("Telefone só deve conter dígitos, hífen, parênteses ou '+'")
-           if "+" in tel and tel.index("+")!=0:
+            if "+" in tel and tel.index("+")!=0:
              raise serializers.ValidationError("'+' só no início")
                    
-           elif len(telefone_cliente) < 8:
+            elif len(telefone_cliente) < 8:
              raise serializers.ValidationError("Telefone deve ter no mínimo 8 dígitos")
        
-           elif email_cliente.endswith(".br") and telefone_cliente.startswith("+") and not telefone_cliente.startswith("+55"):
+            elif email_cliente.endswith(".br") and telefone_cliente.startswith("+") and not telefone_cliente.startswith("+55"):
              raise serializers.ValidationError("E-mail brasileiro deve estar associado a um número do Brasil (+55)")
            
            
-           agendamentos_cliente = Agendamento.objects.filter(email_cliente = email_cliente, estado_agendamento = 'CO')#TRAZ TODOS AGENDAMENTOS CONFIRMADOS CADASTRADOS COM O E-MAIL INFORMADO NA REQUISIÇÃO 
-           #VALIDAÇÃO DE APENAS UM AGENDAMENTO POR DIA PARA O MESMO E-MAIL     
-           for agendamento in agendamentos_cliente:
-             if dt != "":            
-                if agendamento.data_horario.date() == dt.date():
+        agendamentos_cliente = Agendamento.objects.filter(email_cliente = email_cliente, estado_agendamento = 'CO')#TRAZ TODOS AGENDAMENTOS CONFIRMADOS CADASTRADOS COM O E-MAIL INFORMADO NA REQUISIÇÃO 
+        #VALIDAÇÃO DE APENAS UM AGENDAMENTO POR DIA PARA O MESMO E-MAIL     
+        for agendamento in agendamentos_cliente:
+              if dt != "":            
+                if dt.date() == agendamento.data_horario.date():
                   raise serializers.ValidationError("Apenas um agendamento por dia")
         
-           todos_agendamentos = Agendamento.objects.filter(estado_agendamento = 'CO')#TRAZ TODOS AGENDAMENTOS CONFIRMADOS
-           #VALIDAÇÃO DE HORÁRIO JÁ OCUPADO
-           for agendamento in todos_agendamentos:
+        todos_agendamentos = Agendamento.get_agendamentos_confirmados(self)
+        #VALIDAÇÃO DE HORÁRIO JÁ OCUPADO
+        for agendamento in todos_agendamentos:
               if dt == agendamento.data_horario:
-               raise serializers.ValidationError("Horário já ocupado")
+                  raise serializers.ValidationError("Horário já ocupado")
             
            
            
@@ -83,52 +74,21 @@ class AgendamentoSerializer(serializers.ModelSerializer):
         if request and req.method == 'PATCH':
            instance = self.instance
            id = instance.id #TRAZ O ID DO AGENDAMENTO QUE ESTOU MODIFICANDO
-          
-           
-           agendamentos_cliente = Agendamento.objects.filter(email_cliente = instance.email_cliente, estado_agendamento = 'CO')  #TRAZ TODOS AGENDAMENTOS CONFIRMADOS COM O E-MAIL INFORMADO NA REQUISIÇÃO 
+           email_cliente = instance.email_cliente
            #VALIDAÇÃO DE APENAS UM AGENDAMENTO POR DIA PARA O MESMO E-MAIL
            for agendamento in agendamentos_cliente: 
-             if dt != "":           
-                if agendamento.data_horario.date() == dt.date() and  id != agendamento.pk and estado_agendamento_request != 'AG' and estado_agendamento_request != 'CA' and estado_agendamento_request != "":
-                  raise serializers.ValidationError("Apenas um agendamento por dia")
-             else:
-               dt_instance = instance.data_horario
-               if agendamento.data_horario.date() == dt_instance.date() and  id != agendamento.pk and estado_agendamento_request != 'AG' and estado_agendamento_request != 'CA' and estado_agendamento_request != "":
-                  raise serializers.ValidationError("Apenas um agendamento por dia")
+            if dt == "": 
+               dt = instance.data_horario
+            if agendamento.data_horario.date() == dt.date() and  id != agendamento.pk and estado_agendamento_request != 'AG' and estado_agendamento_request != 'CA' and estado_agendamento_request != "":
+                  raise serializers.ValidationError("Apenas um agendamento por dia") 
            
-           todos_agendamentos = Agendamento.objects.filter(estado_agendamento = 'CO')#TRAZ TODOS AGENDAMENTOS CONFIRMADOS
+           
            #VALIDAÇÃO DE HORÁRIO JÁ OCUPADO
            for agendamento in todos_agendamentos:
-              if dt != "": 
-                 
-                 if dt == agendamento.data_horario and id != agendamento.pk and estado_agendamento_request != 'AG' and estado_agendamento_request != 'CA' and estado_agendamento_request != "":
-                 
-                    raise serializers.ValidationError("Horário já ocupado")
-              else:
-                  dt_instance = instance.data_horario
-                  if dt_instance == agendamento.data_horario and id != agendamento.pk and estado_agendamento_request != 'AG' and estado_agendamento_request != 'CA' and estado_agendamento_request != "":
-                     raise serializers.ValidationError("Horário já ocupado")
-           
-           
-           if telefone_cliente != "": #CONDICIONAL PARA CASO O TELEFONE ESTEJA SENDO MODIFICADO
-            #VALIDAÇÃO DO TELEFONE          
-            tel = list(telefone_cliente)  
-            for x in tel:
-              
-             if x.isnumeric() == False and x !="(" and x !=")" and x !="+" and x!="-":
-               print(x)
-               raise serializers.ValidationError("Telefone só deve conter dígitos, hífen, parênteses ou '+'")
-             
-             elif "+" in tel and tel.index("+")!=0:
-              raise serializers.ValidationError("'+' só no início")
-                   
-             elif len(telefone_cliente) < 8:
-              raise serializers.ValidationError("Telefone deve ter no mínimo 8 dígitos")
-       
-             elif email_cliente.endswith(".br") and telefone_cliente.startswith("+") and not telefone_cliente.startswith("+55"):
-              raise serializers.ValidationError("E-mail brasileiro deve estar associado a um número do Brasil (+55)") 
-       
-        
+              if dt == "": 
+                 dt = instance.data_horario 
+              if dt == agendamento.data_horario and id != agendamento.pk and estado_agendamento_request != 'AG' and estado_agendamento_request != 'CA' and estado_agendamento_request != "":
+                 raise serializers.ValidationError("Horário já ocupado")
         
         return request    
 
@@ -140,55 +100,34 @@ class PrestadorSerializer(serializers.ModelSerializer):
       agendamentos = AgendamentoSerializer(many=True, read_only=True)      
 
 class ClienteSerializer(serializers.ModelSerializer):
-  class Meta:
-    model = Cliente
-    fields = '__all__'
-    
-  def validate(self, request):
+    class Meta:
+     model = Cliente
+     fields = '__all__'
+  
+    def validate(self, request):
+        print(request)
+        
         telefone = request.get("telefone", "")
         email = request.get("email", "")
-        
         req = self.context.get('request')
-        
-        if request and req.method == 'POST':
-           #VALIDAÇÃO DO TELEFONE 
-           tel = list(telefone)  
-        
-           for x in tel:
-              if x.isnumeric() == False and x !="(" and x !=")" and x !="+" and x!="-":
-               print(x)
-               raise serializers.ValidationError("Telefone só deve conter dígitos, hífen, parênteses ou '+'")
-           if "+" in tel and tel.index("+")!=0:
-             raise serializers.ValidationError("'+' só no início")
-                   
-           elif len(telefone) < 8:
-             raise serializers.ValidationError("Telefone deve ter no mínimo 8 dígitos")
-       
-           elif email.endswith(".br") and telefone.startswith("+") and not telefone.startswith("+55"):
-             raise serializers.ValidationError("E-mail brasileiro deve estar associado a um número do Brasil (+55)")
-           
-           
-        if request and req.method == 'PATCH':   
-          if telefone != "": #CONDICIONAL PARA CASO O TELEFONE ESTEJA SENDO MODIFICADO
-            #VALIDAÇÃO DO TELEFONE          
-            tel = list(telefone)  
+        if telefone != "" or req.method == 'POST':
+            tel = list(telefone)
             for x in tel:
-              
              if x.isnumeric() == False and x !="(" and x !=")" and x !="+" and x!="-":
                print(x)
                raise serializers.ValidationError("Telefone só deve conter dígitos, hífen, parênteses ou '+'")
-             
-             elif "+" in tel and tel.index("+")!=0:
-              raise serializers.ValidationError("'+' só no início")
+            if "+" in tel and tel.index("+")!=0:
+             raise serializers.ValidationError("'+' só no início")
                    
-             elif len(telefone) < 8:
-              raise serializers.ValidationError("Telefone deve ter no mínimo 8 dígitos")
+            elif len(telefone) < 8:
+             raise serializers.ValidationError("Telefone deve ter no mínimo 8 dígitos")
        
-             elif email.endswith(".br") and telefone.startswith("+") and not telefone.startswith("+55"):
-              raise serializers.ValidationError("E-mail brasileiro deve estar associado a um número do Brasil (+55)") 
-        
-           
+            elif email.endswith(".br") and telefone.startswith("+") and not telefone.startswith("+55"):
+             raise serializers.ValidationError("E-mail brasileiro deve estar associado a um número do Brasil (+55)")
+            
         return request
+    
+   
   
        
       

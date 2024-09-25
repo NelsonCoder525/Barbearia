@@ -30,30 +30,24 @@ class IsOwnerOrCreateOnly(permissions.BasePermission):
       return True
     return False
     
-
 class IsPrestador(permissions.BasePermission):
   def has_object_permission(self, request, view, obj):
     if obj.prestador == request.user:
       return True
     return False
   
- 
-
 class IsSuperUser(permissions.BasePermission):
   def has_permission(self, request, view):
     if request.user.is_superuser == True:
       return True
     return False
 
-
-
-
-class AgendamentoDetail(generics.RetrieveUpdateDestroyAPIView): #/api/agendamentos/<pk>/
+class AgendamentoDetail(generics.RetrieveUpdateDestroyAPIView):
   queryset = Agendamento.objects.all()
   serializer_class = AgendamentoSerializer
   permission_classes = [IsSuperUser]
 
-class AgendamentoList(generics.ListCreateAPIView):   #classe genérica   
+class AgendamentoList(generics.ListCreateAPIView):
   queryset = Agendamento.objects.filter(estado_agendamento = 'CO')  
   serializer_class = AgendamentoSerializer
   permission_classes = [IsOwnerOrCreateOnly]
@@ -64,83 +58,62 @@ class AgendamentoList(generics.ListCreateAPIView):   #classe genérica
     
     return queryset
  
-class PrestadorList(generics.ListAPIView #/api/agendamentos/?username
-   ):   #classe genérica
-  
+class PrestadorList(generics.ListAPIView):    
   serializer_class = PrestadorSerializer
-  queryset = User.objects.all()
-  
+  queryset = User.objects.all()  
   permission_classes = [IsSuperUser]
 
-class ClienteList(generics.ListCreateAPIView #/api/clientes/
-   ):   #classe genérica
-  
+class ClienteList(generics.ListCreateAPIView):
   serializer_class = ClienteSerializer
-  queryset = Cliente.objects.all()
-  
+  queryset = Cliente.objects.all()  
   permission_classes = [IsSuperUser] 
   
-class ClienteDetail(generics.RetrieveUpdateDestroyAPIView): #/api/clientes/<pk>/
+class ClienteDetail(generics.RetrieveUpdateDestroyAPIView):
   queryset = Cliente.objects.all()
   serializer_class = ClienteSerializer
   permission_classes = [IsSuperUser]
   
-class FidelidadeDetail(generics.RetrieveUpdateDestroyAPIView #/api/fidelidade/<pk>
-   ):   #classe genérica
-    
+class FidelidadeDetail(generics.RetrieveUpdateDestroyAPIView):    
   serializer_class = FidelidadeSerializer
   queryset = Fidelidade.objects.all()
   permission_classes = [IsSuperUser]  
 
 @api_view(http_method_names=["GET"])
-def fidelizacoes_list(self):
-
-         
-          todos_agendamentos = Agendamento.objects.filter(estado_agendamento="EX")#TRAZ TODOS AGENDAMENTOS EXECUTADOS
-          todos_clientes = Cliente.objects.all()#TRAZ TODOS OS CLIENTES
-          todas_fidelizacoes = Fidelidade.objects.all()#TRAZ TODAS AS FIDELIZAÇÕES JÁ REALIZADAS
-          todos_prestadores = User.objects.all()#TRAZ TODOS OS PRESTADORES
-          
-          
-          
-          #VERIFICAÇÃO SE O E-MAIL PERTENCE A UM CLIENTE CADASTRADO:
-          for clientes in todos_clientes: #VERIFICA CADA UM DOS CLIENTES CADASTRADOS
-            for agendamento in todos_agendamentos: #PARA CADA CLIENTE, TRAZ CADA AGENDAMENTO QUE ESTEJA MARCADO COMO EXECUTADO
-             if agendamento.email_cliente == clientes.email: #VERIFICA SE O E-MAIL DO CLIENTE BATE COM O E-MAIL DO AGENDAMENTO
-               if Fidelidade.objects.all() ==  []: #VERIFICA SE A TABELA DE FIDELIZAÇÕES ESTÁ VAZIA
-                 cl = Cliente.objects.filter(email=clientes.email)#TRAZ O CLIENTE CUJO E-MAIL SEJA O MESMO E-MAIL DO CLIENTE QUE ESTÁ SENDO VERIFICADO NESTA ITERAÇÃO DO LAÇO FOR
-                 ag = Agendamento.objects.filter(pk=agendamento.pk)#TRAZ O AGENDAMENTO CUJO ID SEJA O MESMO DO AGENDAMENTO DESTA ITERAÇÃO DO LAÇO FOR
-                 Fidelidade.objects.create(cliente = cl[0], prestador_fidelidade = agendamento.prestador, agendamento_id = ag[0]) #GRAVA NA TABELA FIDELIDADE
-               else: #CASO A TABELA FIDELDIADE NÃO ESTEJA VAZIA
-               
-                count = 0 #CONTADOR COMEÇANDO EM ZERO
-                for fidel in todas_fidelizacoes: #VERIFICA CADA UMA DAS FIDELIZAÇÕES EXISTENTES
-                 
-                 if fidel.agendamento_id.pk == agendamento.pk: #VERIFICA SE O AGENDAMENTO QUE ESTÁ GERANDO A FIDELIZAÇÃO JÁ EXISTE NA TABELA FIDELIDADE
-                   count +=1 #SE EXISTIR, AUMENTA O CONTADOR
-                   
-                 
-          
-                 
-                if count<1: #FORA DO FOR DE FIDELIDADE, VERIFICA SE O CONTADOR CONTINUA ZERADO (OU SEJA, ESTA FIDELIZAÇÃO É INÉDITA E PODE SER GRAVADA)
-                    
-                    cl = Cliente.objects.filter(email=clientes.email)#TRAZ O CLIENTE CUJO E-MAIL SEJA O MESMO E-MAIL DO CLIENTE QUE ESTÁ SENDO VERIFICADO NESTA ITERAÇÃO DO LAÇO FOR
-                    ag = Agendamento.objects.filter(pk=agendamento.pk)#TRAZ O AGENDAMENTO CUJO ID SEJA O MESMO DO AGENDAMENTO DESTA ITERAÇÃO DO LAÇO FOR
-                    Fidelidade.objects.create(cliente = cl[0], prestador_fidelidade = agendamento.prestador, agendamento_id = ag[0])#GRAVA NA TABELA FIDELIDADE
+def fidelizacoes_list(self):         
+    todos_agendamentos = Agendamento.objects.filter(estado_agendamento="EX")
+    todos_clientes = Cliente.objects.all()
+    todas_fidelizacoes = Fidelidade.objects.all()
+    todos_prestadores = User.objects.all()
+           
+    for clientes in todos_clientes: 
+      for agendamento in todos_agendamentos:
+          if agendamento.email_cliente == clientes.email: 
+            if Fidelidade.objects.all() ==  []: 
+              cl = Cliente.objects.filter(email=clientes.email)
+              ag = Agendamento.objects.filter(pk=agendamento.pk)
+              Fidelidade.objects.create(cliente = cl[0], prestador_fidelidade = agendamento.prestador, agendamento_id = ag[0])
+            else:                
+              count = 0 
+              for fidel in todas_fidelizacoes: 
+                if fidel.agendamento_id.pk == agendamento.pk:
+                  count +=1 
+                
+                if count<1:                    
+                  cl = Cliente.objects.filter(email=clientes.email)
+                  ag = Agendamento.objects.filter(pk=agendamento.pk)
+                  Fidelidade.objects.create(cliente = cl[0], prestador_fidelidade = agendamento.prestador, agendamento_id = ag[0])
                   
-          fidelizacoes = Fidelidade.objects.all()#TRAZ TODAS AS FIDELIZAÇÕES
-          serialized_data = serialize("json", fidelizacoes) #SERIALIZA O QUERYSET EM JSON
-          serialized_data = json.loads(serialized_data) #TRANSFORMA O JSON EM DICIONÁRIO
+          fidelizacoes = Fidelidade.objects.all()
+          serialized_data = serialize("json", fidelizacoes)
+          serialized_data = json.loads(serialized_data)
           
           fidel_list = []
           for fidel in todas_fidelizacoes: 
             fidel_str = f"Fidelização nº{fidel.pk}, Cliente: {fidel.cliente.nome}, Prestador: {fidel.prestador_fidelidade}, Agendamento (ID): {fidel.agendamento_id.pk}" 
             fidel_list.append(fidel_str)  
-          
-          
+                    
           display = []
           for client in todos_clientes:
-            
             for prest in todos_prestadores:
               contador = 0
               for fidel in todas_fidelizacoes:
@@ -149,10 +122,8 @@ def fidelizacoes_list(self):
               if contador>0:
                display_str = f"Cliente {client.nome} possui {contador} pontos de fidelidade com prestador {prest.username}"
                display.append(display_str)
-             
-                 
-          
-          return JsonResponse(display, safe = False)#RETORNA A LISTA DE STRINGS COM AS INFORMAÇÕES DOS PONTOS DE FIDELIDADE NA VIEW             
+           
+          return JsonResponse(display, safe = False)          
                         
 
      

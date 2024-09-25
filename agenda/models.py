@@ -22,6 +22,9 @@ class Agendamento(models.Model):
 
     estado_agendamento = models.CharField(max_length=2, choices=ESTADOS_AGENDAMENTO_CHOICES, default=agendado)
     
+    def get_agendamentos_confirmados(self):
+        todos_agendamentos_confirmados = Agendamento.objects.filter(estado_agendamento = 'CO')
+        return todos_agendamentos_confirmados
 
 class Cliente(models.Model):
     nome = models.CharField(max_length=200)
