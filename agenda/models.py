@@ -30,9 +30,18 @@ class Cliente(models.Model):
     nome = models.CharField(max_length=200)
     email = models.EmailField()
     telefone = models.CharField(max_length=20)
+  
     
 class Fidelidade(models.Model):
     cliente = models.ForeignKey(Cliente, on_delete = models.CASCADE)
     prestador_fidelidade = models.ForeignKey('auth.User', related_name="agendamentos_fidelidade", on_delete = models.CASCADE)
     agendamento_id = models.ForeignKey(Agendamento, on_delete = models.CASCADE)
     
+class Endereco(models.Model):
+    prestador = models.ForeignKey('auth.User', related_name="prestador_endereco", on_delete = models.CASCADE)
+    cep = models.CharField(max_length=8)
+    uf = models.CharField(max_length=2, blank=True)
+    localidade = models.CharField(max_length=50, blank=True)
+    bairro = models.CharField(max_length=50, blank=True)
+    logradouro = models.CharField(max_length=50, blank=True)
+    complemento = models.CharField(max_length=50, blank=True)

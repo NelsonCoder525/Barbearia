@@ -1,8 +1,13 @@
 from rest_framework import serializers
 from django.utils import timezone
 from datetime import datetime, timedelta, time, date
-from agenda.models import Agendamento, Cliente, Fidelidade
+from agenda.models import Agendamento, Cliente, Fidelidade, Endereco
 from django.contrib.auth.models import User
+from agenda.utils import get_horarios_list
+from agenda.libs import viacep
+
+
+
 
 
 class AgendamentoSerializer(serializers.ModelSerializer):
@@ -15,12 +20,17 @@ class AgendamentoSerializer(serializers.ModelSerializer):
     def validate_data_horario(self, value):
         if value < timezone.now():
            raise serializers.ValidationError("Agendamento não pode ser feito no passado!")
-       
+        
+        if value not in get_horarios_list(value.date()):
+           raise serializers.ValidationError(f"Esse horário {value} não está disponível")
+           
+           
+        
         elif value.minute % 30 != 0: #só permite que horários sejam cadastrados com minutos iguais  00 ou 30
            raise serializers.ValidationError("Horário inválido")
        
-        elif value.weekday() == 6:
-           raise serializers.ValidationError("Barbearia fechada aos domingos") 
+      #   elif value.weekday() == 6:
+      #      raise serializers.ValidationError("Barbearia fechada aos domingos") 
         
         elif value.weekday()!=5 and (value.hour < 9 or value.hour > 17 or value.hour == 12) :
              raise serializers.ValidationError("Barbearia fechada")
@@ -92,12 +102,7 @@ class AgendamentoSerializer(serializers.ModelSerializer):
         
         return request    
 
-class PrestadorSerializer(serializers.ModelSerializer):
-      class Meta:
-        model = User    
-        fields = ['id', 'username', 'agendamentos']
-      
-      agendamentos = AgendamentoSerializer(many=True, read_only=True)      
+    
 
 class ClienteSerializer(serializers.ModelSerializer):
     class Meta:
@@ -136,5 +141,42 @@ class FidelidadeSerializer(serializers.ModelSerializer):
        model = Fidelidade
        fields = '__all__'
        
+class EnderecoSerializer(serializers.ModelSerializer):
+     class Meta:
+       model = Endereco
+       fields = '__all__'
+       
     
+     def validate(self, attrs):
+         cep = attrs.get("cep", None)
+         
+         endereco = viacep.endereco(cep)
+         
+         uf = attrs.get("uf", None)
+         localidade = attrs.get("localidade", None)
+         bairro = attrs.get("bairro", None)
+         logradouro = attrs.get("logradouro", None)
+         
+         
+         if not uf and not localidade and not  bairro and not logradouro:
+                  
+          attrs["uf"] = endereco["uf"]
+          attrs["localidade"] = endereco["localidade"]
+          attrs["bairro"] = endereco["bairro"]
+          attrs["logradouro"] = endereco["logradouro"]
+         
+         return attrs
+      
+      
+      
+       
+        
+       
+class PrestadorSerializer(serializers.ModelSerializer):
+      class Meta:
+        model = User    
+        fields = ['id', 'username', 'agendamentos', 'enderecos']
+      
+      agendamentos = AgendamentoSerializer(many=True, read_only=True)   
+      enderecos = EnderecoSerializer(many=True, read_only=True)     
         

@@ -3,15 +3,17 @@ from django.core.serializers import serialize
 from django.http import JsonResponse
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from agenda.models import Agendamento, Cliente, Fidelidade
+from agenda.models import Agendamento, Cliente, Fidelidade, Endereco
 from datetime import datetime, timedelta, timezone, date
-from agenda.serializers import AgendamentoSerializer, PrestadorSerializer, ClienteSerializer, FidelidadeSerializer
+from agenda.serializers import AgendamentoSerializer, PrestadorSerializer, ClienteSerializer, FidelidadeSerializer, EnderecoSerializer
 from rest_framework import serializers
 from rest_framework.views import APIView
 from rest_framework import mixins
 from rest_framework import generics, permissions
 from django.contrib.auth.models import User
 import json
+import requests
+from agenda.utils import get_horarios_list
 
 
 # Create your views here.
@@ -128,54 +130,19 @@ def fidelizacoes_list(self):
 
      
 @api_view(http_method_names=["GET"])
-def horarios_list(request):
-  data = request.query_params.get("data")
-  data = datetime.fromisoformat(data).date()
+def horarios_disponiveis(request):
   
-  #verificar se a data está no passado:
-  if data < date.today():
-    raise serializers.ValidationError("Não há horários disponíveis no passado!")
+  data_param = request.query_params.get('data', None)
+  data = datetime.strptime(data_param, '%Y-%m-%d').date()
+  horarios = sorted(list(get_horarios_list(data)))
+
+  return Response(horarios)
+
+
+class EnderecoList(generics.ListCreateAPIView):
+  serializer_class = EnderecoSerializer
+  queryset = Endereco.objects.all()  
   
-  #trazer todos os agendamentos para comparação:
-  qs = Agendamento.objects.filter(estado_agendamento = 'CO')
- 
-  horario = "09:00"
-  horario = datetime.strptime(horario, "%H:%M")  
-  hr_disp = [] #lista de horários disponíveis a ser populada
-  
-  
-  if data.weekday() < 5: #verifica se for meio da semana
-   while horario.hour < 18:
-     count = 0
-     for ag in qs:
-      if ag.data_horario.date()==data and ag.data_horario.hour == horario.hour and ag.data_horario.minute == horario.minute: #verifica se existe algum agendamento no horário corrente da iteração
-       count = count+1   
-     if count == 0: #se não existir, popular lista de horários disponíveis
-      hr = f"{data} {horario.hour}:{horario.minute}"
-      hr = datetime.strptime(hr, "%Y-%m-%d %H:%M")
-      hr_disp.append(hr)
-      
-     horario = horario + timedelta(minutes = 30)
-     if horario.hour == 12: #verifica se o horário está dentro do almoço
-       horario = horario + timedelta(hours = 1) #se almoço, pula 1h
-       
-  elif data.weekday() == 5: #verifica se é sábado
-    while horario.hour < 13:
-      count = 0
-      for ag in qs:
-       if ag.data_horario.date()==data and ag.data_horario.hour == horario.hour and ag.data_horario.minute == horario.minute:
-        count = count+1   
-      if count == 0:
-       hr = f"{data} {horario.hour}:{horario.minute}"
-       hr = datetime.strptime(hr, "%Y-%m-%d %H:%M")
-       hr_disp.append(hr)
-      
-      horario = horario + timedelta(minutes = 30)
-    
-  elif data.weekday() == 6: #verifica se é domingo
-    raise serializers.ValidationError("Sem horários disponíveis no domingo")      
-    
-  return JsonResponse(hr_disp, safe=False)    #retorna lista de horários disponíveis
   
   
   
