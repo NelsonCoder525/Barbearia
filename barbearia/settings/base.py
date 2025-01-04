@@ -76,6 +76,7 @@ TEMPLATES = [
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+STATIC_ROOT = BASE_DIR
 
 
 WSGI_APPLICATION = 'barbearia.wsgi.application'
