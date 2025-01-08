@@ -31,6 +31,8 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', os.getenv('DJANGO_SETTINGS_MODUL
 DEBUG = True
 
 ALLOWED_HOSTS = [] #requisições feitas através de localhhost (postman etc.)
+#RENDER_EXTERNAL_HOSTNAME = 'https://barbearia-stxs.onrender.com/'
+
 
 
 # Application definition
@@ -74,7 +76,7 @@ TEMPLATES = [
     },
 ]
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
