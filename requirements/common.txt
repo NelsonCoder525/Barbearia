@@ -25,10 +25,6 @@ platformdirs==4.3.6
 pluggy==1.5.0
 psycopg2==2.9.10
 Pygments==2.18.0
-pytest==8.3.4
-pytest-cov==6.0.0
-pytest-django==4.9.0
-python-dotenv==1.0.1
 PyYAML==6.0.2
 render==1.0.0
 render-cli==0.2.1

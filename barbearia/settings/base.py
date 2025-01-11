@@ -24,15 +24,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = os.environ.get("SECRET_KEY", 'abc')
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', os.getenv('DJANGO_SETTINGS_MODULE', 'barbearia.settings.dev'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = [] #requisições feitas através de localhhost (postman etc.)
-#RENDER_EXTERNAL_HOSTNAME = 'https://barbearia-stxs.onrender.com/'
-
 
 
 # Application definition
@@ -55,7 +53,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'barbearia.urls'
@@ -75,11 +72,6 @@ TEMPLATES = [
         },
     },
 ]
-
-#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-
-STATIC_ROOT = BASE_DIR / 'staticfiles'
-
 
 WSGI_APPLICATION = 'barbearia.wsgi.application'
 

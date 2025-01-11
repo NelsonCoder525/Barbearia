@@ -1,0 +1,8 @@
+2025-01-11 15:39:05,902 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-01-11 15:49:28,168 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-01-11 15:56:34,967 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-01-11 16:02:54,689 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-01-11 16:03:07,750 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-01-11 16:18:03,553 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-01-11 16:19:05,065 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\base.py changed, reloading.
+2025-01-11 16:19:05,775 django.utils.autoreload INFO     Watching for file changes with StatReloader
