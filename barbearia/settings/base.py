@@ -32,7 +32,7 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', os.getenv('DJANGO_SETTINGS_MODUL
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [] #requisições feitas através de localhhost (postman etc.)
+ALLOWED_HOSTS = ['barbearia-nb2d.onrender.com'] #requisições feitas através de localhhost (postman etc.)
 
 
 # Application definition
