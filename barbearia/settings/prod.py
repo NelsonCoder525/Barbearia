@@ -12,7 +12,7 @@ print(f"DJANGO_SETTINGS_MODULE: {os.getenv('DJANGO_SETTINGS_MODULE')}")
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresqlpsycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'barbearia_db',
         'USER': 'admin',
         'PASSWORD': 'FhEWTcuajahidrEIYiaLlfYVpZabxei1',
