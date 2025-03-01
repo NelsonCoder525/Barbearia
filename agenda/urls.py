@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import  path
 from django.conf.urls import include
-from agenda.views import  AgendamentoList, AgendamentoDetail, PrestadorList, ClienteList,ClienteDetail, fidelizacoes_list, FidelidadeDetail, horarios_disponiveis, EnderecoList
+from agenda.views import  AgendamentoList, AgendamentoDetail, PrestadorList, ClienteList,ClienteDetail, fidelizacoes_list, FidelidadeDetail, horarios_disponiveis, EnderecoList, healthcheck
 from agenda.utils import get_horarios_list
 
 urlpatterns = [
@@ -14,5 +14,6 @@ urlpatterns = [
         path('fidelidade/', fidelizacoes_list),
         path('fidelidade/<int:pk>/', FidelidadeDetail.as_view()),
         path('prestadores/<int:pk>/enderecos/', EnderecoList.as_view()),
+        path('', healthcheck),
         
 ]

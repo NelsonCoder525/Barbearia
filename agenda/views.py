@@ -143,6 +143,10 @@ class EnderecoList(generics.ListCreateAPIView):
   serializer_class = EnderecoSerializer
   queryset = Endereco.objects.all()  
   
+@api_view(http_method_names=["GET"])
+def healthcheck(request):
+  return JsonResponse({"status": "ok"}, status=200)
+  
   
   
   
