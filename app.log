@@ -6,3 +6,46 @@
 2025-01-11 16:18:03,553 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2025-01-11 16:19:05,065 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\base.py changed, reloading.
 2025-01-11 16:19:05,775 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-04 20:26:52,062 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-04 20:27:21,422 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-04 20:27:43,352 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-04 20:28:33,402 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\wsgi.py changed, reloading.
+2025-03-04 20:28:34,413 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-04 20:28:45,350 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\wsgi.py changed, reloading.
+2025-03-04 20:28:46,069 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-04 20:29:20,018 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-04 20:29:36,090 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\wsgi.py changed, reloading.
+2025-03-04 20:29:36,876 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-04 20:30:00,976 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-04 20:39:24,931 django.request WARNING  Not Found: /favicon.ico
+2025-03-04 20:46:14,590 django.request WARNING  Forbidden: /barber/prestadores/
+2025-03-04 20:47:51,776 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-04 20:49:35,197 django.request WARNING  Forbidden: /barber/fidelidade/
+2025-03-04 20:49:44,264 django.request ERROR    Internal Server Error: /barber/fidelidade/
+Traceback (most recent call last):
+  File "E:\Documentos\PYTHON\barber_shop\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Documentos\PYTHON\barber_shop\venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Documentos\PYTHON\barber_shop\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Documentos\PYTHON\barber_shop\venv\Lib\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Documentos\PYTHON\barber_shop\venv\Lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\Documentos\PYTHON\barber_shop\venv\Lib\site-packages\rest_framework\views.py", line 423, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Expected a `Response`, `HttpResponse` or `StreamingHttpResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2025-03-04 20:49:54,852 django.request WARNING  Forbidden: /barber/clientes/
+2025-03-04 20:50:08,417 django.request WARNING  Forbidden: /barber/agendamentos/
+2025-03-04 20:50:17,179 django.request WARNING  Forbidden: /barber/agendamentos/
+2025-03-04 20:59:02,740 django.request WARNING  Forbidden: /barber/agendamentos/
+2025-03-04 20:59:09,984 django.request WARNING  Bad Request: /barber/agendamentos/
+2025-03-06 22:09:05,696 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-08 15:52:18,343 django.utils.autoreload INFO     Watching for file changes with StatReloader
