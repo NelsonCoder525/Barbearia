@@ -16,7 +16,7 @@ def get_horarios_list(data: date) -> Iterable[datetime]:
   
   #verificar se a data é um feriado:
   if brasil_api.is_feriado(data):
-      raise serializers.ValidationError("Feriado, parceiro!")
+      raise serializers.ValidationError("Feriado, camarada!")
       
   
   else:

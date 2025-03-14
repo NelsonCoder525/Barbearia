@@ -49,3 +49,19 @@ AssertionError: Expected a `Response`, `HttpResponse` or `StreamingHttpResponse`
 2025-03-04 20:59:09,984 django.request WARNING  Bad Request: /barber/agendamentos/
 2025-03-06 22:09:05,696 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2025-03-08 15:52:18,343 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-08 15:58:34,146 django.request WARNING  Forbidden: /barber/agendamentos/
+2025-03-08 15:58:43,870 django.request WARNING  Forbidden: /barber/agendamentos/
+2025-03-08 16:00:04,283 root         INFO     Fazendo requisição para BrasilAPI para a data: 2025-07-20
+2025-03-08 16:00:04,301 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): brasilapi.com.br:443
+2025-03-08 16:00:04,362 urllib3.connectionpool DEBUG    https://brasilapi.com.br:443 "GET /api/feriados/v1/2025 HTTP/11" 200 None
+2025-03-08 16:00:04,367 django.request WARNING  Bad Request: /barber/agendamentos/
+2025-03-08 16:00:11,286 root         INFO     Fazendo requisição para BrasilAPI para a data: 2025-07-21
+2025-03-08 16:00:11,288 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): brasilapi.com.br:443
+2025-03-08 16:00:11,344 urllib3.connectionpool DEBUG    https://brasilapi.com.br:443 "GET /api/feriados/v1/2025 HTTP/11" 200 None
+2025-03-08 16:00:11,350 django.request WARNING  Bad Request: /barber/agendamentos/
+2025-03-08 16:00:26,316 root         INFO     Fazendo requisição para BrasilAPI para a data: 2025-07-21
+2025-03-08 16:00:26,318 urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): brasilapi.com.br:443
+2025-03-08 16:00:26,363 urllib3.connectionpool DEBUG    https://brasilapi.com.br:443 "GET /api/feriados/v1/2025 HTTP/11" 200 None
+2025-03-08 16:04:52,443 django.request WARNING  Bad Request: /barber/register/
+2025-03-08 16:06:03,559 django.request WARNING  Bad Request: /barber/clientes/
+2025-03-08 16:14:00,894 django.request WARNING  Bad Request: /barber/register/
