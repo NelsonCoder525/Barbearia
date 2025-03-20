@@ -1505,3 +1505,8 @@ def accumulate(self, *args, **kwargs):
 2025-03-20 19:01:26,207 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2025-03-20 19:01:28,370 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\base.py changed, reloading.
 2025-03-20 19:01:29,045 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 19:05:15,064 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 19:39:22,507 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\prod.py changed, reloading.
+2025-03-20 19:39:23,274 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 19:39:26,820 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\prod.py changed, reloading.
+2025-03-20 19:39:27,500 django.utils.autoreload INFO     Watching for file changes with StatReloader

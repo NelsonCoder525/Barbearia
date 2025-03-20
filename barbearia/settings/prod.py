@@ -25,3 +25,5 @@ DATABASES = {
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'apikey'
+
+CELERY_BROKER_URL = os.getenv("REDIS_URL")
