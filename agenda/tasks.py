@@ -27,8 +27,8 @@ def gera_relatorio_prestadores():
     email = EmailMessage(
         'Relatório de Prestadores',
         'Segue em anexo o relatório de prestadores',
-        'nelsonr525@hotmail.com',
-        ['nelsonr525@hotmail.com']
+        'nelsonrqj@gmail.com',
+        ['nelsonrqj@gmail.com']
     )
         
         

@@ -26,4 +26,5 @@ EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'apikey'
 
-CELERY_BROKER_URL = os.getenv("REDIS_URL")
+CELERY_BROKER_URL = os.getenv("REDIS_URL", 'redis://default:IR17pFpUUeCCkAmEdmV4IqLnIgjK1zKy@redis-13883.c336.samerica-east1-1.gce.redns.redis-cloud.com:13883')
+CELERY_RESULT_BACKEND = os.getenv("REDIS_URL", 'redis://default:IR17pFpUUeCCkAmEdmV4IqLnIgjK1zKy@redis-13883.c336.samerica-east1-1.gce.redns.redis-cloud.com:13883')
