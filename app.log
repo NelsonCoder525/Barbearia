@@ -1470,3 +1470,4 @@ def accumulate(self, *args, **kwargs):
 2025-03-20 15:35:30,324 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\prod.py changed, reloading.
 2025-03-20 15:35:40,780 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2025-03-20 15:40:10,579 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 15:40:41,365 django.request WARNING  Forbidden: /barber/agendamentos/
