@@ -1478,3 +1478,15 @@ def accumulate(self, *args, **kwargs):
 2025-03-20 18:07:44,297 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2025-03-20 18:07:52,028 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
 2025-03-20 18:07:52,742 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 18:15:11,452 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 18:22:57,857 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\base.py changed, reloading.
+2025-03-20 18:22:58,567 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 18:23:09,894 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\base.py changed, reloading.
+2025-03-20 18:23:10,608 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 18:23:18,373 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\base.py changed, reloading.
+2025-03-20 18:23:19,091 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 18:24:20,279 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 18:29:11,409 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\base.py changed, reloading.
+2025-03-20 18:29:12,115 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 18:29:15,679 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\base.py changed, reloading.
+2025-03-20 18:29:16,342 django.utils.autoreload INFO     Watching for file changes with StatReloader
