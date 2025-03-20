@@ -65,3 +65,1408 @@ AssertionError: Expected a `Response`, `HttpResponse` or `StreamingHttpResponse`
 2025-03-08 16:04:52,443 django.request WARNING  Bad Request: /barber/register/
 2025-03-08 16:06:03,559 django.request WARNING  Bad Request: /barber/clientes/
 2025-03-08 16:14:00,894 django.request WARNING  Bad Request: /barber/register/
+2025-03-16 14:18:05,038 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 14:18:18,578 django.request WARNING  Not Found: /
+2025-03-16 14:18:19,125 django.request WARNING  Not Found: /favicon.ico
+2025-03-16 14:18:30,167 django.request WARNING  Not Found: /barber/atendimentos/
+2025-03-16 14:18:37,789 django.request WARNING  Not Found: /barber/atendimento/
+2025-03-16 14:25:54,589 django.request WARNING  Forbidden: /barber/agendamentos/
+2025-03-16 14:28:34,098 django.request WARNING  Forbidden: /barber/agendamentos/1/
+2025-03-16 15:01:02,801 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:01:03,499 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:01:24,587 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:01:25,204 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:01:29,121 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:01:29,734 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:01:31,522 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:01:32,256 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:01:37,208 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:01:37,851 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:02:21,876 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:02:22,496 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:02:24,274 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:02:24,927 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:02:33,051 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:02:33,662 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:02:36,509 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:02:37,170 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:02:43,464 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:02:44,140 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:02:56,558 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:02:57,186 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:03:02,170 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:03:02,819 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:03:13,055 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:03:13,753 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:03:54,579 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:03:55,226 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:04:33,949 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:04:34,599 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:04:38,515 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:04:39,129 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:05:11,489 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:05:12,141 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:05:21,287 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:05:21,923 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:05:25,781 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:05:26,379 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:05:29,176 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:05:29,864 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:05:40,114 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:05:40,755 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:05:53,078 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:05:53,771 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:05:56,721 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:05:57,441 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:06:00,276 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:06:00,933 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:06:02,686 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:06:03,402 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:06:13,647 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:06:14,335 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:06:16,150 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:06:16,830 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:06:18,647 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:06:19,312 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:06:36,932 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:06:37,602 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:06:43,624 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:06:44,266 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:06:49,253 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:06:49,942 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:06:52,838 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:06:53,464 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:06:55,235 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:06:55,920 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:07:06,164 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:07:06,817 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:07:16,002 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:07:16,635 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:07:18,468 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:07:19,086 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:07:34,630 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:07:35,258 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:09:32,877 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:10:05,275 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:10:05,904 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:10:29,860 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:10:30,530 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:10:39,716 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:10:40,364 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:10:50,603 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:10:51,216 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:10:53,029 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:10:53,652 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:10:58,583 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:10:59,204 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:11:15,731 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:11:16,356 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:11:24,514 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:11:25,146 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:11:27,989 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:11:28,663 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:12:04,204 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:12:04,818 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:12:06,626 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:12:07,235 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:12:09,096 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:12:09,717 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:12:12,527 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:12:13,157 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:12:21,255 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:12:21,870 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:12:27,838 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:12:28,491 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:12:38,722 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:12:39,374 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:12:44,351 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:12:44,968 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:12:50,018 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:12:50,663 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:12:53,501 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:12:54,112 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:13:56,074 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:13:56,739 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:14:33,703 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:14:34,356 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:14:40,407 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:14:41,057 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:14:51,290 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:14:51,928 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:14:54,772 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:14:55,416 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:15:01,456 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:15:02,072 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:15:04,893 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:15:05,575 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:16:53,017 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\urls.py changed, reloading.
+2025-03-16 15:16:53,644 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:17:06,108 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:31:58,861 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:31:59,645 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:32:07,076 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:32:07,756 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:32:10,912 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:32:11,533 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:32:13,299 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:32:13,928 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:34:34,844 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:34:35,476 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:34:38,328 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:34:38,941 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:34:41,011 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:34:41,664 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:34:59,582 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:35:00,207 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:35:15,072 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:35:15,727 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:35:21,826 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:35:22,474 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:35:31,640 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:35:32,258 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:35:56,216 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:35:56,900 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:36:13,858 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:36:14,478 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:36:17,615 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:36:18,235 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:36:20,302 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:36:20,925 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:36:23,022 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:36:23,649 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:36:25,743 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:36:26,375 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:36:28,432 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:36:29,151 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:36:37,588 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:36:38,290 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:36:40,438 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:36:41,079 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:36:43,175 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:36:43,873 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:36:54,415 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:36:55,057 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:36:57,137 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:36:57,780 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:36:59,884 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:37:00,529 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:37:22,740 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:37:23,388 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:37:25,427 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:37:26,082 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:37:28,139 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:37:28,809 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:37:49,968 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:37:50,644 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:37:52,802 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:37:53,446 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:37:55,562 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:37:56,216 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:37:57,962 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:37:58,575 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:38:01,359 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:38:02,001 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:38:28,521 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:38:29,152 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:38:36,199 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:38:36,896 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:38:42,897 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:38:43,535 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:38:50,616 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:38:51,237 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:38:55,173 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:38:55,779 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:38:58,584 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:38:59,277 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:39:01,443 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:39:02,163 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:40:26,876 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:40:27,554 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:40:35,986 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:40:36,616 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:40:39,492 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:40:40,116 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:40:45,088 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:40:45,697 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:40:49,593 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:40:50,341 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:41:02,087 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:41:02,864 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:41:04,691 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:41:05,340 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:41:22,294 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:41:22,986 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:41:27,987 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:41:28,666 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:41:30,456 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:41:31,122 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:41:33,937 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:41:34,559 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:41:36,634 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:41:37,264 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:41:45,654 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:41:46,389 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:42:29,842 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:42:30,478 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:42:33,650 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:42:34,276 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:53:44,785 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\serializers.py changed, reloading.
+2025-03-16 15:53:45,462 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:53:47,681 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\serializers.py changed, reloading.
+2025-03-16 15:53:48,402 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:55:34,433 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\serializers.py changed, reloading.
+2025-03-16 15:55:35,126 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:57:23,531 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:57:24,284 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:57:29,624 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:57:30,284 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:57:33,462 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:57:34,080 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-16 15:57:38,261 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-16 15:57:38,958 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-17 14:44:42,693 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-17 16:28:58,955 celery.utils.functional DEBUG    
+def soma(a, b):
+    return 1
+
+2025-03-17 16:28:58,956 celery.utils.functional DEBUG    
+def chain(*args, **kwargs):
+    return 1
+
+2025-03-17 16:28:58,957 celery.utils.functional DEBUG    
+def xstarmap(task, it):
+    return 1
+
+2025-03-17 16:28:58,958 celery.utils.functional DEBUG    
+def accumulate(self, *args, **kwargs):
+    return 1
+
+2025-03-17 16:28:58,959 celery.utils.functional DEBUG    
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+2025-03-17 16:28:58,960 celery.utils.functional DEBUG    
+def chunks(task, it, n):
+    return 1
+
+2025-03-17 16:28:58,961 celery.utils.functional DEBUG    
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+2025-03-17 16:28:58,962 celery.utils.functional DEBUG    
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+2025-03-17 16:28:58,963 celery.utils.functional DEBUG    
+def xmap(task, it):
+    return 1
+
+2025-03-17 16:28:58,964 celery.utils.functional DEBUG    
+def backend_cleanup():
+    return 1
+
+2025-03-17 16:48:08,759 celery.utils.functional DEBUG    
+def soma(a, b):
+    return 1
+
+2025-03-17 16:48:08,760 celery.utils.functional DEBUG    
+def chain(*args, **kwargs):
+    return 1
+
+2025-03-17 16:48:08,761 celery.utils.functional DEBUG    
+def xstarmap(task, it):
+    return 1
+
+2025-03-17 16:48:08,761 celery.utils.functional DEBUG    
+def accumulate(self, *args, **kwargs):
+    return 1
+
+2025-03-17 16:48:08,762 celery.utils.functional DEBUG    
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+2025-03-17 16:48:08,763 celery.utils.functional DEBUG    
+def chunks(task, it, n):
+    return 1
+
+2025-03-17 16:48:08,764 celery.utils.functional DEBUG    
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+2025-03-17 16:48:08,764 celery.utils.functional DEBUG    
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+2025-03-17 16:48:08,765 celery.utils.functional DEBUG    
+def xmap(task, it):
+    return 1
+
+2025-03-17 16:48:08,766 celery.utils.functional DEBUG    
+def backend_cleanup():
+    return 1
+
+2025-03-17 17:04:33,496 celery.utils.functional DEBUG    
+def soma(a, b):
+    return 1
+
+2025-03-17 17:04:33,497 celery.utils.functional DEBUG    
+def chain(*args, **kwargs):
+    return 1
+
+2025-03-17 17:04:33,497 celery.utils.functional DEBUG    
+def xstarmap(task, it):
+    return 1
+
+2025-03-17 17:04:33,497 celery.utils.functional DEBUG    
+def accumulate(self, *args, **kwargs):
+    return 1
+
+2025-03-17 17:04:33,498 celery.utils.functional DEBUG    
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+2025-03-17 17:04:33,499 celery.utils.functional DEBUG    
+def chunks(task, it, n):
+    return 1
+
+2025-03-17 17:04:33,500 celery.utils.functional DEBUG    
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+2025-03-17 17:04:33,500 celery.utils.functional DEBUG    
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+2025-03-17 17:04:33,501 celery.utils.functional DEBUG    
+def xmap(task, it):
+    return 1
+
+2025-03-17 17:04:33,502 celery.utils.functional DEBUG    
+def backend_cleanup():
+    return 1
+
+2025-03-17 17:13:47,222 celery.utils.functional DEBUG    
+def soma(a, b):
+    return 1
+
+2025-03-17 17:13:47,223 celery.utils.functional DEBUG    
+def chain(*args, **kwargs):
+    return 1
+
+2025-03-17 17:13:47,223 celery.utils.functional DEBUG    
+def xstarmap(task, it):
+    return 1
+
+2025-03-17 17:13:47,223 celery.utils.functional DEBUG    
+def accumulate(self, *args, **kwargs):
+    return 1
+
+2025-03-17 17:13:47,224 celery.utils.functional DEBUG    
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+2025-03-17 17:13:47,225 celery.utils.functional DEBUG    
+def chunks(task, it, n):
+    return 1
+
+2025-03-17 17:13:47,226 celery.utils.functional DEBUG    
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+2025-03-17 17:13:47,226 celery.utils.functional DEBUG    
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+2025-03-17 17:13:47,227 celery.utils.functional DEBUG    
+def xmap(task, it):
+    return 1
+
+2025-03-17 17:13:47,228 celery.utils.functional DEBUG    
+def backend_cleanup():
+    return 1
+
+2025-03-17 17:16:01,668 celery.utils.functional DEBUG    
+def soma(a, b):
+    return 1
+
+2025-03-17 17:16:01,668 celery.utils.functional DEBUG    
+def chain(*args, **kwargs):
+    return 1
+
+2025-03-17 17:16:01,669 celery.utils.functional DEBUG    
+def xstarmap(task, it):
+    return 1
+
+2025-03-17 17:16:01,669 celery.utils.functional DEBUG    
+def accumulate(self, *args, **kwargs):
+    return 1
+
+2025-03-17 17:16:01,670 celery.utils.functional DEBUG    
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+2025-03-17 17:16:01,670 celery.utils.functional DEBUG    
+def chunks(task, it, n):
+    return 1
+
+2025-03-17 17:16:01,671 celery.utils.functional DEBUG    
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+2025-03-17 17:16:01,672 celery.utils.functional DEBUG    
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+2025-03-17 17:16:01,672 celery.utils.functional DEBUG    
+def xmap(task, it):
+    return 1
+
+2025-03-17 17:16:01,673 celery.utils.functional DEBUG    
+def backend_cleanup():
+    return 1
+
+2025-03-17 17:20:18,108 celery.utils.functional DEBUG    
+def soma(a, b):
+    return 1
+
+2025-03-17 17:20:18,108 celery.utils.functional DEBUG    
+def chain(*args, **kwargs):
+    return 1
+
+2025-03-17 17:20:18,109 celery.utils.functional DEBUG    
+def xstarmap(task, it):
+    return 1
+
+2025-03-17 17:20:18,109 celery.utils.functional DEBUG    
+def accumulate(self, *args, **kwargs):
+    return 1
+
+2025-03-17 17:20:18,110 celery.utils.functional DEBUG    
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+2025-03-17 17:20:18,110 celery.utils.functional DEBUG    
+def chunks(task, it, n):
+    return 1
+
+2025-03-17 17:20:18,111 celery.utils.functional DEBUG    
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+2025-03-17 17:20:18,112 celery.utils.functional DEBUG    
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+2025-03-17 17:20:18,112 celery.utils.functional DEBUG    
+def xmap(task, it):
+    return 1
+
+2025-03-17 17:20:18,113 celery.utils.functional DEBUG    
+def backend_cleanup():
+    return 1
+
+2025-03-17 17:25:46,578 celery.utils.functional DEBUG    
+def soma(a, b):
+    return 1
+
+2025-03-17 17:25:46,579 celery.utils.functional DEBUG    
+def chain(*args, **kwargs):
+    return 1
+
+2025-03-17 17:25:46,579 celery.utils.functional DEBUG    
+def xstarmap(task, it):
+    return 1
+
+2025-03-17 17:25:46,579 celery.utils.functional DEBUG    
+def accumulate(self, *args, **kwargs):
+    return 1
+
+2025-03-17 17:25:46,580 celery.utils.functional DEBUG    
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+2025-03-17 17:25:46,581 celery.utils.functional DEBUG    
+def chunks(task, it, n):
+    return 1
+
+2025-03-17 17:25:46,581 celery.utils.functional DEBUG    
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+2025-03-17 17:25:46,582 celery.utils.functional DEBUG    
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+2025-03-17 17:25:46,583 celery.utils.functional DEBUG    
+def xmap(task, it):
+    return 1
+
+2025-03-17 17:25:46,584 celery.utils.functional DEBUG    
+def backend_cleanup():
+    return 1
+
+2025-03-17 17:31:24,082 celery.utils.functional DEBUG    
+def soma(a, b):
+    return 1
+
+2025-03-17 17:31:24,083 celery.utils.functional DEBUG    
+def chain(*args, **kwargs):
+    return 1
+
+2025-03-17 17:31:24,084 celery.utils.functional DEBUG    
+def xstarmap(task, it):
+    return 1
+
+2025-03-17 17:31:24,084 celery.utils.functional DEBUG    
+def accumulate(self, *args, **kwargs):
+    return 1
+
+2025-03-17 17:31:24,085 celery.utils.functional DEBUG    
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+2025-03-17 17:31:24,086 celery.utils.functional DEBUG    
+def chunks(task, it, n):
+    return 1
+
+2025-03-17 17:31:24,087 celery.utils.functional DEBUG    
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+2025-03-17 17:31:24,088 celery.utils.functional DEBUG    
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+2025-03-17 17:31:24,089 celery.utils.functional DEBUG    
+def xmap(task, it):
+    return 1
+
+2025-03-17 17:31:24,090 celery.utils.functional DEBUG    
+def backend_cleanup():
+    return 1
+
+2025-03-18 14:47:36,695 celery.utils.functional DEBUG    
+def soma(a, b):
+    return 1
+
+2025-03-18 14:47:36,696 celery.utils.functional DEBUG    
+def chain(*args, **kwargs):
+    return 1
+
+2025-03-18 14:47:36,696 celery.utils.functional DEBUG    
+def xstarmap(task, it):
+    return 1
+
+2025-03-18 14:47:36,697 celery.utils.functional DEBUG    
+def accumulate(self, *args, **kwargs):
+    return 1
+
+2025-03-18 14:47:36,941 celery.utils.functional DEBUG    
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+2025-03-18 14:47:36,942 celery.utils.functional DEBUG    
+def chunks(task, it, n):
+    return 1
+
+2025-03-18 14:47:36,942 celery.utils.functional DEBUG    
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+2025-03-18 14:47:36,943 celery.utils.functional DEBUG    
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+2025-03-18 14:47:36,944 celery.utils.functional DEBUG    
+def xmap(task, it):
+    return 1
+
+2025-03-18 14:47:36,945 celery.utils.functional DEBUG    
+def backend_cleanup():
+    return 1
+
+2025-03-18 15:06:32,230 celery.utils.functional DEBUG    
+def soma(a, b):
+    return 1
+
+2025-03-18 15:06:32,231 celery.utils.functional DEBUG    
+def chain(*args, **kwargs):
+    return 1
+
+2025-03-18 15:06:32,231 celery.utils.functional DEBUG    
+def xstarmap(task, it):
+    return 1
+
+2025-03-18 15:06:32,231 celery.utils.functional DEBUG    
+def accumulate(self, *args, **kwargs):
+    return 1
+
+2025-03-18 15:06:32,232 celery.utils.functional DEBUG    
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+2025-03-18 15:06:32,233 celery.utils.functional DEBUG    
+def chunks(task, it, n):
+    return 1
+
+2025-03-18 15:06:32,233 celery.utils.functional DEBUG    
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+2025-03-18 15:06:32,234 celery.utils.functional DEBUG    
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+2025-03-18 15:06:32,235 celery.utils.functional DEBUG    
+def xmap(task, it):
+    return 1
+
+2025-03-18 15:06:32,235 celery.utils.functional DEBUG    
+def backend_cleanup():
+    return 1
+
+2025-03-18 15:06:52,896 celery.utils.functional DEBUG    
+def soma(a, b):
+    return 1
+
+2025-03-18 15:06:52,897 celery.utils.functional DEBUG    
+def chain(*args, **kwargs):
+    return 1
+
+2025-03-18 15:06:52,897 celery.utils.functional DEBUG    
+def xstarmap(task, it):
+    return 1
+
+2025-03-18 15:06:52,897 celery.utils.functional DEBUG    
+def accumulate(self, *args, **kwargs):
+    return 1
+
+2025-03-18 15:06:52,898 celery.utils.functional DEBUG    
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+2025-03-18 15:06:52,899 celery.utils.functional DEBUG    
+def chunks(task, it, n):
+    return 1
+
+2025-03-18 15:06:52,900 celery.utils.functional DEBUG    
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+2025-03-18 15:06:52,900 celery.utils.functional DEBUG    
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+2025-03-18 15:06:52,901 celery.utils.functional DEBUG    
+def xmap(task, it):
+    return 1
+
+2025-03-18 15:06:52,902 celery.utils.functional DEBUG    
+def backend_cleanup():
+    return 1
+
+2025-03-18 15:20:00,430 celery.utils.functional DEBUG    
+def soma(a, b):
+    return 1
+
+2025-03-18 15:20:00,430 celery.utils.functional DEBUG    
+def chain(*args, **kwargs):
+    return 1
+
+2025-03-18 15:20:00,431 celery.utils.functional DEBUG    
+def xstarmap(task, it):
+    return 1
+
+2025-03-18 15:20:00,431 celery.utils.functional DEBUG    
+def accumulate(self, *args, **kwargs):
+    return 1
+
+2025-03-18 15:20:00,432 celery.utils.functional DEBUG    
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+2025-03-18 15:20:00,433 celery.utils.functional DEBUG    
+def chunks(task, it, n):
+    return 1
+
+2025-03-18 15:20:00,434 celery.utils.functional DEBUG    
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+2025-03-18 15:20:00,435 celery.utils.functional DEBUG    
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+2025-03-18 15:20:00,436 celery.utils.functional DEBUG    
+def xmap(task, it):
+    return 1
+
+2025-03-18 15:20:00,437 celery.utils.functional DEBUG    
+def backend_cleanup():
+    return 1
+
+2025-03-18 15:44:04,688 celery.utils.functional DEBUG    
+def soma(a, b):
+    return 1
+
+2025-03-18 15:44:04,688 celery.utils.functional DEBUG    
+def chain(*args, **kwargs):
+    return 1
+
+2025-03-18 15:44:04,689 celery.utils.functional DEBUG    
+def xstarmap(task, it):
+    return 1
+
+2025-03-18 15:44:04,689 celery.utils.functional DEBUG    
+def accumulate(self, *args, **kwargs):
+    return 1
+
+2025-03-18 15:44:04,690 celery.utils.functional DEBUG    
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+2025-03-18 15:44:04,691 celery.utils.functional DEBUG    
+def chunks(task, it, n):
+    return 1
+
+2025-03-18 15:44:04,692 celery.utils.functional DEBUG    
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+2025-03-18 15:44:04,693 celery.utils.functional DEBUG    
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+2025-03-18 15:44:04,694 celery.utils.functional DEBUG    
+def xmap(task, it):
+    return 1
+
+2025-03-18 15:44:04,695 celery.utils.functional DEBUG    
+def backend_cleanup():
+    return 1
+
+2025-03-18 16:02:52,116 celery.utils.functional DEBUG    
+def soma(a, b):
+    return 1
+
+2025-03-18 16:02:52,117 celery.utils.functional DEBUG    
+def chain(*args, **kwargs):
+    return 1
+
+2025-03-18 16:02:52,117 celery.utils.functional DEBUG    
+def xstarmap(task, it):
+    return 1
+
+2025-03-18 16:02:52,117 celery.utils.functional DEBUG    
+def accumulate(self, *args, **kwargs):
+    return 1
+
+2025-03-18 16:02:52,118 celery.utils.functional DEBUG    
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+2025-03-18 16:02:52,119 celery.utils.functional DEBUG    
+def chunks(task, it, n):
+    return 1
+
+2025-03-18 16:02:52,120 celery.utils.functional DEBUG    
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+2025-03-18 16:02:52,121 celery.utils.functional DEBUG    
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+2025-03-18 16:02:52,122 celery.utils.functional DEBUG    
+def xmap(task, it):
+    return 1
+
+2025-03-18 16:02:52,122 celery.utils.functional DEBUG    
+def backend_cleanup():
+    return 1
+
+2025-03-19 13:51:45,438 celery.utils.functional DEBUG    
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+2025-03-19 13:51:45,439 celery.utils.functional DEBUG    
+def chunks(task, it, n):
+    return 1
+
+2025-03-19 13:51:45,439 celery.utils.functional DEBUG    
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+2025-03-19 13:51:45,440 celery.utils.functional DEBUG    
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+2025-03-19 13:51:45,440 celery.utils.functional DEBUG    
+def xmap(task, it):
+    return 1
+
+2025-03-19 13:51:45,441 celery.utils.functional DEBUG    
+def soma(a, b):
+    return 1
+
+2025-03-19 13:51:45,441 celery.utils.functional DEBUG    
+def backend_cleanup():
+    return 1
+
+2025-03-19 13:51:45,442 celery.utils.functional DEBUG    
+def chain(*args, **kwargs):
+    return 1
+
+2025-03-19 13:51:45,442 celery.utils.functional DEBUG    
+def xstarmap(task, it):
+    return 1
+
+2025-03-19 13:51:45,443 celery.utils.functional DEBUG    
+def accumulate(self, *args, **kwargs):
+    return 1
+
+2025-03-19 14:15:47,363 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:24:14,415 celery.utils.functional DEBUG    
+def gera_relatorio_prestadores():
+    return 1
+
+2025-03-19 14:29:08,834 celery.utils.functional DEBUG    
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+2025-03-19 14:29:08,836 celery.utils.functional DEBUG    
+def chunks(task, it, n):
+    return 1
+
+2025-03-19 14:29:08,837 celery.utils.functional DEBUG    
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+2025-03-19 14:29:08,837 celery.utils.functional DEBUG    
+def gera_relatorio_prestadores():
+    return 1
+
+2025-03-19 14:29:08,838 celery.utils.functional DEBUG    
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+2025-03-19 14:29:08,839 celery.utils.functional DEBUG    
+def xmap(task, it):
+    return 1
+
+2025-03-19 14:29:08,840 celery.utils.functional DEBUG    
+def soma(a, b):
+    return 1
+
+2025-03-19 14:29:08,841 celery.utils.functional DEBUG    
+def backend_cleanup():
+    return 1
+
+2025-03-19 14:29:08,842 celery.utils.functional DEBUG    
+def chain(*args, **kwargs):
+    return 1
+
+2025-03-19 14:29:08,843 celery.utils.functional DEBUG    
+def xstarmap(task, it):
+    return 1
+
+2025-03-19 14:29:08,843 celery.utils.functional DEBUG    
+def accumulate(self, *args, **kwargs):
+    return 1
+
+2025-03-19 14:30:20,873 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\celery.py changed, reloading.
+2025-03-19 14:30:21,603 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:30:26,019 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\celery.py changed, reloading.
+2025-03-19 14:30:26,700 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:30:28,978 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\celery.py changed, reloading.
+2025-03-19 14:30:29,781 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:31:26,442 celery.utils.functional DEBUG    
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+2025-03-19 14:31:26,443 celery.utils.functional DEBUG    
+def chunks(task, it, n):
+    return 1
+
+2025-03-19 14:31:26,444 celery.utils.functional DEBUG    
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+2025-03-19 14:31:26,446 celery.utils.functional DEBUG    
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+2025-03-19 14:31:26,447 celery.utils.functional DEBUG    
+def soma(a, b):
+    return 1
+
+2025-03-19 14:31:26,448 celery.utils.functional DEBUG    
+def xmap(task, it):
+    return 1
+
+2025-03-19 14:31:26,449 celery.utils.functional DEBUG    
+def backend_cleanup():
+    return 1
+
+2025-03-19 14:31:26,450 celery.utils.functional DEBUG    
+def gera_relatorio_prestadores():
+    return 1
+
+2025-03-19 14:31:26,451 celery.utils.functional DEBUG    
+def chain(*args, **kwargs):
+    return 1
+
+2025-03-19 14:31:26,452 celery.utils.functional DEBUG    
+def xstarmap(task, it):
+    return 1
+
+2025-03-19 14:31:26,453 celery.utils.functional DEBUG    
+def accumulate(self, *args, **kwargs):
+    return 1
+
+2025-03-19 14:31:32,653 celery.utils.functional DEBUG    
+def gera_relatorio_prestadores():
+    return 1
+
+2025-03-19 14:33:04,166 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\celery.py changed, reloading.
+2025-03-19 14:33:04,877 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:33:08,155 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\celery.py changed, reloading.
+2025-03-19 14:33:08,866 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:33:11,118 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\celery.py changed, reloading.
+2025-03-19 14:33:11,848 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:33:15,848 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\celery.py changed, reloading.
+2025-03-19 14:33:16,580 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:33:18,495 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\celery.py changed, reloading.
+2025-03-19 14:33:19,226 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:33:21,148 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\celery.py changed, reloading.
+2025-03-19 14:33:21,831 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:33:38,820 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\celery.py changed, reloading.
+2025-03-19 14:33:39,522 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:38:26,457 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 14:38:27,261 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:38:31,600 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 14:38:32,329 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:38:34,529 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 14:38:35,297 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:38:40,640 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 14:38:41,347 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:39:01,577 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 14:39:02,270 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:39:15,651 celery.utils.functional DEBUG    
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+2025-03-19 14:39:15,653 celery.utils.functional DEBUG    
+def chunks(task, it, n):
+    return 1
+
+2025-03-19 14:39:15,654 celery.utils.functional DEBUG    
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+2025-03-19 14:39:15,654 celery.utils.functional DEBUG    
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+2025-03-19 14:39:15,655 celery.utils.functional DEBUG    
+def soma(a, b):
+    return 1
+
+2025-03-19 14:39:15,656 celery.utils.functional DEBUG    
+def xmap(task, it):
+    return 1
+
+2025-03-19 14:39:15,656 celery.utils.functional DEBUG    
+def backend_cleanup():
+    return 1
+
+2025-03-19 14:39:15,657 celery.utils.functional DEBUG    
+def gera_relatorio_prestadores():
+    return 1
+
+2025-03-19 14:39:15,658 celery.utils.functional DEBUG    
+def chain(*args, **kwargs):
+    return 1
+
+2025-03-19 14:39:15,660 celery.utils.functional DEBUG    
+def xstarmap(task, it):
+    return 1
+
+2025-03-19 14:39:15,660 celery.utils.functional DEBUG    
+def accumulate(self, *args, **kwargs):
+    return 1
+
+2025-03-19 14:39:25,715 celery.utils.functional DEBUG    
+def gera_relatorio_prestadores():
+    return 1
+
+2025-03-19 14:41:26,428 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-19 14:41:27,156 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:41:29,394 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-19 14:41:30,104 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:41:33,935 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\views.py changed, reloading.
+2025-03-19 14:41:34,666 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 14:42:15,427 celery.utils.functional DEBUG    
+def gera_relatorio_prestadores():
+    return 1
+
+2025-03-19 15:02:45,412 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\base.py changed, reloading.
+2025-03-19 15:02:46,103 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 15:02:49,443 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\base.py changed, reloading.
+2025-03-19 15:37:19,270 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 15:40:20,848 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\base.py changed, reloading.
+2025-03-19 15:40:21,562 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 15:43:37,808 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\base.py changed, reloading.
+2025-03-19 15:43:38,573 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 15:43:41,876 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\base.py changed, reloading.
+2025-03-19 15:43:42,617 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:06:19,701 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:08:52,765 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:08:53,517 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:09:01,070 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:09:01,755 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:09:04,039 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:09:04,755 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:09:11,246 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:09:11,915 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:09:14,717 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:09:15,352 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:09:19,209 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:09:19,944 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:09:32,717 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:09:33,420 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:09:35,257 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:09:35,886 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:09:39,109 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:09:39,942 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:09:52,772 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:09:53,582 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:10:10,695 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:10:11,450 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:10:14,806 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:10:15,517 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:10:20,399 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:10:21,050 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:10:39,618 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:10:40,265 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:10:46,250 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:10:46,857 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:10:51,769 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:10:52,450 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:10:57,394 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:10:58,095 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:11:05,545 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:11:06,217 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:11:11,575 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:11:12,269 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:11:16,577 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:11:17,264 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:11:37,522 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:11:38,407 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:11:55,434 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:11:56,161 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:12:01,037 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:12:01,708 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:12:04,521 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:12:05,137 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:12:08,988 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:12:09,628 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:12:17,675 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:12:18,307 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:12:33,744 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:12:34,367 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:12:36,194 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:12:36,836 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:12:40,654 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:12:41,324 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:12:43,064 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:12:43,682 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:12:47,533 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:12:48,160 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:12:50,924 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:12:51,581 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:12:55,427 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:12:56,087 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:12:59,360 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:13:00,003 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:13:05,289 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:13:05,917 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:16:19,836 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:16:20,517 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:19:22,872 celery.utils.functional DEBUG    
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+2025-03-19 16:19:22,873 celery.utils.functional DEBUG    
+def chunks(task, it, n):
+    return 1
+
+2025-03-19 16:19:22,874 celery.utils.functional DEBUG    
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+2025-03-19 16:19:22,875 celery.utils.functional DEBUG    
+def gera_relatorio_prestadores():
+    return 1
+
+2025-03-19 16:19:22,876 celery.utils.functional DEBUG    
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+2025-03-19 16:19:22,877 celery.utils.functional DEBUG    
+def soma(a, b):
+    return 1
+
+2025-03-19 16:19:22,878 celery.utils.functional DEBUG    
+def xmap(task, it):
+    return 1
+
+2025-03-19 16:19:22,879 celery.utils.functional DEBUG    
+def backend_cleanup():
+    return 1
+
+2025-03-19 16:19:22,879 celery.utils.functional DEBUG    
+def chain(*args, **kwargs):
+    return 1
+
+2025-03-19 16:19:22,880 celery.utils.functional DEBUG    
+def xstarmap(task, it):
+    return 1
+
+2025-03-19 16:19:22,881 celery.utils.functional DEBUG    
+def accumulate(self, *args, **kwargs):
+    return 1
+
+2025-03-19 16:19:41,888 celery.utils.functional DEBUG    
+def gera_relatorio_prestadores():
+    return 1
+
+2025-03-19 16:26:47,085 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:26:47,781 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:26:51,065 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:26:51,756 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:27:03,894 celery.utils.functional DEBUG    
+def gera_relatorio_prestadores():
+    return 1
+
+2025-03-19 16:28:23,971 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-19 16:28:24,708 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-19 16:29:03,154 celery.utils.functional DEBUG    
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+2025-03-19 16:29:03,155 celery.utils.functional DEBUG    
+def chunks(task, it, n):
+    return 1
+
+2025-03-19 16:29:03,156 celery.utils.functional DEBUG    
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+2025-03-19 16:29:03,157 celery.utils.functional DEBUG    
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+2025-03-19 16:29:03,157 celery.utils.functional DEBUG    
+def soma(a, b):
+    return 1
+
+2025-03-19 16:29:03,158 celery.utils.functional DEBUG    
+def xmap(task, it):
+    return 1
+
+2025-03-19 16:29:03,159 celery.utils.functional DEBUG    
+def backend_cleanup():
+    return 1
+
+2025-03-19 16:29:03,160 celery.utils.functional DEBUG    
+def gera_relatorio_prestadores():
+    return 1
+
+2025-03-19 16:29:03,161 celery.utils.functional DEBUG    
+def chain(*args, **kwargs):
+    return 1
+
+2025-03-19 16:29:03,161 celery.utils.functional DEBUG    
+def xstarmap(task, it):
+    return 1
+
+2025-03-19 16:29:03,162 celery.utils.functional DEBUG    
+def accumulate(self, *args, **kwargs):
+    return 1
+
+2025-03-19 16:29:19,601 celery.utils.functional DEBUG    
+def gera_relatorio_prestadores():
+    return 1
+
+2025-03-20 13:57:46,280 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 14:06:04,766 celery.utils.functional DEBUG    
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+2025-03-20 14:06:04,767 celery.utils.functional DEBUG    
+def chunks(task, it, n):
+    return 1
+
+2025-03-20 14:06:04,767 celery.utils.functional DEBUG    
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+2025-03-20 14:06:04,768 celery.utils.functional DEBUG    
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+2025-03-20 14:06:04,769 celery.utils.functional DEBUG    
+def soma(a, b):
+    return 1
+
+2025-03-20 14:06:04,770 celery.utils.functional DEBUG    
+def xmap(task, it):
+    return 1
+
+2025-03-20 14:06:04,770 celery.utils.functional DEBUG    
+def backend_cleanup():
+    return 1
+
+2025-03-20 14:06:04,771 celery.utils.functional DEBUG    
+def gera_relatorio_prestadores():
+    return 1
+
+2025-03-20 14:06:04,772 celery.utils.functional DEBUG    
+def chain(*args, **kwargs):
+    return 1
+
+2025-03-20 14:06:04,773 celery.utils.functional DEBUG    
+def xstarmap(task, it):
+    return 1
+
+2025-03-20 14:06:04,774 celery.utils.functional DEBUG    
+def accumulate(self, *args, **kwargs):
+    return 1
+
+2025-03-20 14:18:12,381 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\celery.py changed, reloading.
+2025-03-20 14:18:13,121 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 14:18:20,767 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\celery.py changed, reloading.
+2025-03-20 14:18:21,431 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 14:18:25,755 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\celery.py changed, reloading.
+2025-03-20 14:18:26,434 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 14:18:33,960 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\celery.py changed, reloading.
+2025-03-20 14:18:34,657 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 14:23:25,490 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\base.py changed, reloading.
+2025-03-20 14:23:26,183 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 14:23:28,491 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\base.py changed, reloading.
+2025-03-20 14:23:29,441 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 14:23:32,729 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\base.py changed, reloading.
+2025-03-20 14:23:33,417 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 14:23:36,750 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\base.py changed, reloading.
+2025-03-20 14:23:37,416 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 14:24:57,100 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\base.py changed, reloading.
+2025-03-20 14:33:24,189 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 14:33:37,728 celery.utils.functional DEBUG    
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+2025-03-20 14:33:37,730 celery.utils.functional DEBUG    
+def chunks(task, it, n):
+    return 1
+
+2025-03-20 14:33:37,731 celery.utils.functional DEBUG    
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+2025-03-20 14:33:37,732 celery.utils.functional DEBUG    
+def gera_relatorio_prestadores():
+    return 1
+
+2025-03-20 14:33:37,733 celery.utils.functional DEBUG    
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+2025-03-20 14:33:37,735 celery.utils.functional DEBUG    
+def soma(a, b):
+    return 1
+
+2025-03-20 14:33:37,736 celery.utils.functional DEBUG    
+def xmap(task, it):
+    return 1
+
+2025-03-20 14:33:37,737 celery.utils.functional DEBUG    
+def backend_cleanup():
+    return 1
+
+2025-03-20 14:33:37,738 celery.utils.functional DEBUG    
+def chain(*args, **kwargs):
+    return 1
+
+2025-03-20 14:33:37,739 celery.utils.functional DEBUG    
+def xstarmap(task, it):
+    return 1
+
+2025-03-20 14:33:37,740 celery.utils.functional DEBUG    
+def accumulate(self, *args, **kwargs):
+    return 1
+
+2025-03-20 14:34:16,696 celery.utils.functional DEBUG    
+def gera_relatorio_prestadores():
+    return 1
+
+2025-03-20 15:09:11,767 celery.utils.functional DEBUG    
+def chord(self, header, body, partial_args=0, interval=1, countdown=2, max_retries=3, eager=4, **kwargs):
+    return 1
+
+2025-03-20 15:09:11,768 celery.utils.functional DEBUG    
+def chunks(task, it, n):
+    return 1
+
+2025-03-20 15:09:11,769 celery.utils.functional DEBUG    
+def unlock_chord(self, group_id, callback, interval=0, max_retries=1, result=2, Result=3, GroupResult=4, result_from_tuple=5, **kwargs):
+    return 1
+
+2025-03-20 15:09:11,770 celery.utils.functional DEBUG    
+def gera_relatorio_prestadores():
+    return 1
+
+2025-03-20 15:09:11,772 celery.utils.functional DEBUG    
+def group(self, tasks, result, group_id, partial_args, add_to_parent=0):
+    return 1
+
+2025-03-20 15:09:11,772 celery.utils.functional DEBUG    
+def soma(a, b):
+    return 1
+
+2025-03-20 15:09:11,774 celery.utils.functional DEBUG    
+def xmap(task, it):
+    return 1
+
+2025-03-20 15:09:11,775 celery.utils.functional DEBUG    
+def backend_cleanup():
+    return 1
+
+2025-03-20 15:09:11,776 celery.utils.functional DEBUG    
+def chain(*args, **kwargs):
+    return 1
+
+2025-03-20 15:09:11,777 celery.utils.functional DEBUG    
+def xstarmap(task, it):
+    return 1
+
+2025-03-20 15:09:11,778 celery.utils.functional DEBUG    
+def accumulate(self, *args, **kwargs):
+    return 1
+
+2025-03-20 15:18:39,239 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 15:32:42,773 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\prod.py changed, reloading.
+2025-03-20 15:32:43,476 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 15:33:16,391 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\prod.py changed, reloading.
+2025-03-20 15:33:17,114 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 15:33:29,882 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\prod.py changed, reloading.
+2025-03-20 15:33:30,534 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 15:34:44,753 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\prod.py changed, reloading.
+2025-03-20 15:34:45,433 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 15:34:57,136 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\prod.py changed, reloading.
+2025-03-20 15:34:57,810 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 15:35:19,041 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\prod.py changed, reloading.
+2025-03-20 15:35:19,693 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 15:35:30,324 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\prod.py changed, reloading.
+2025-03-20 15:35:40,780 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-20 15:40:10,579 django.utils.autoreload INFO     Watching for file changes with StatReloader

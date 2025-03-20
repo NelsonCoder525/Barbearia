@@ -164,3 +164,12 @@ LOGGING = {  # DictConfig schema: https://docs.python.org/3/library/logging.conf
         }
     }
 }
+
+EMAIL_BACKEND = os.environ.get('EMAIL_BACKEND','django.core.mail.backends.smtp.EmailBackend')
+EMAIL_HOST = os.environ.get('EMAIL_HOST','localhost')
+EMAIL_PORT = os.environ.get('EMAIL_PORT','1025')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER','')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD','')
+
+CELERY_BROKER_URL = os.environ.get('REDIS_URL', 'redis://localhost:6379/0')
+CELERY_RESULT_BACKEND = os.environ.get('REDIS_URL', 'redis://localhost:6379/0')

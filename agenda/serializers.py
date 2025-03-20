@@ -11,10 +11,14 @@ from agenda.libs import viacep
 
 
 class AgendamentoSerializer(serializers.ModelSerializer):
+    prestador = serializers.SerializerMethodField()
     
     class Meta:
         model = Agendamento
         fields = '__all__'
+        
+    def get_prestador(self, obj):
+       return obj.prestador.username
     
     
     def validate_data_horario(self, value):

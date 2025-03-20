@@ -69,5 +69,6 @@ def get_horarios_list(data: date) -> Iterable[datetime]:
     
   
    return hr_disp    #retorna lista de horários disponíveis
- 
+
+
  

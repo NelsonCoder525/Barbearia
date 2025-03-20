@@ -1,6 +1,7 @@
+import csv
 from django.shortcuts import get_object_or_404
 from django.core.serializers import serialize
-from django.http import JsonResponse
+from django.http import HttpResponse, JsonResponse
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from agenda.models import Agendamento, Cliente, Fidelidade, Endereco
@@ -10,11 +11,13 @@ from rest_framework import serializers
 from rest_framework.views import APIView
 from rest_framework import mixins
 from rest_framework import generics, permissions
+from rest_framework.decorators import permission_classes
 from django.contrib.auth.models import User
 import json
 import requests
 from agenda.utils import get_horarios_list
 from rest_framework import status
+from agenda.tasks import gera_relatorio_prestadores
 
 
 # Create your views here.
@@ -53,7 +56,7 @@ class AgendamentoDetail(generics.RetrieveUpdateDestroyAPIView):
 class AgendamentoList(generics.ListCreateAPIView):
   queryset = Agendamento.objects.filter(estado_agendamento = 'CO')  
   serializer_class = AgendamentoSerializer
-  permission_classes = [IsOwnerOrCreateOnly]
+  #permission_classes = [IsOwnerOrCreateOnly]
   
   def get_queryset(self):
     username = self.request.query_params.get("username", None)
@@ -61,11 +64,38 @@ class AgendamentoList(generics.ListCreateAPIView):
     
     return queryset
  
-class PrestadorList(generics.ListAPIView):    
-  serializer_class = PrestadorSerializer
-  queryset = User.objects.all()  
-  permission_classes = [IsSuperUser]
+# class PrestadorList(generics.ListAPIView):    
+#   serializer_class = PrestadorSerializer
+#   queryset = User.objects.all()  
+#   permission_classes = [IsSuperUser]
 
+@api_view(http_method_names=["GET"])
+@permission_classes([permissions.IsAdminUser])
+def relatorio_prestadores(request):
+  formato = request.query_params.get("formato")
+  
+  if formato == "csv":
+    data_hoje = date.today()
+    #response = HttpResponse(content_type='text/csv', headers={'Content-Disposition': f'attachment; filename="relatorio_{data_hoje}.csv"'})
+    # writer = csv.writer(response)
+    # writer.writerow(["Prestador", "Data e Horário", "E-mail Cliente", "Telefone Cliente", "Estado do Agendamento"])
+    # for prestador in serializer.data:
+    #   agendamentos = prestador["agendamentos"]
+    #   for agendamento in agendamentos:
+    #     writer.writerow([agendamento["prestador"], agendamento["data_horario"], agendamento["email_cliente"], agendamento["telefone_cliente"], agendamento["estado_agendamento"]])
+      
+      
+    result = gera_relatorio_prestadores.delay() 
+    return Response({"task_id": result.task_id})
+      
+      
+      
+  else:
+    prestadores = User.objects.all()
+    serializer = PrestadorSerializer(prestadores, many=True)
+    return Response(serializer.data)
+    
+    
 class ClienteList(generics.ListCreateAPIView):
   serializer_class = ClienteSerializer
   queryset = Cliente.objects.all()  
