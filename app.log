@@ -1526,3 +1526,98 @@ def accumulate(self, *args, **kwargs):
 2025-03-20 20:44:16,952 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2025-03-20 20:44:20,469 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
 2025-03-20 20:44:21,158 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 13:53:31,001 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:07:41,738 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:07:42,413 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:08:20,078 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:08:20,738 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:08:26,799 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:08:27,460 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:08:30,367 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:08:31,149 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:08:34,081 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:08:34,717 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:08:37,511 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:08:38,189 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:08:39,998 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:08:40,622 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:09:19,281 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:09:19,958 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:09:22,820 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:09:23,490 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:09:32,340 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:09:33,066 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:09:34,904 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:09:35,519 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:09:38,313 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:09:39,035 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:09:41,869 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:09:42,492 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:09:45,290 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:09:45,923 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:09:47,691 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:09:48,338 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:10:03,771 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:10:04,402 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:10:07,288 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:10:07,924 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:10:13,553 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:10:14,203 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:10:19,112 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:10:19,733 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:10:21,509 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:10:22,137 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:10:48,189 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:10:48,844 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:10:51,731 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:10:52,383 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:11:28,842 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:11:29,481 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:11:32,281 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:11:32,903 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:11:38,826 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:11:39,446 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:12:59,340 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:13:00,075 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:13:02,330 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:13:02,986 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:13:16,017 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:13:16,681 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:13:22,711 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:13:23,338 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:13:47,208 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:13:47,912 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:13:55,716 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:13:56,356 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:14:07,242 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:14:07,900 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:14:10,217 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:14:10,838 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:14:22,751 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:14:23,428 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:14:28,035 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:14:28,670 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:14:30,905 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:14:31,566 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:14:35,027 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:14:35,659 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:14:42,258 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:14:42,912 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:14:45,107 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:14:45,790 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:14:51,754 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:14:52,380 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:15:00,445 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:15:01,043 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:15:08,066 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:15:08,713 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:15:11,508 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:15:12,104 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:15:44,324 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:15:44,919 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:15:49,855 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:15:50,458 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:16:17,314 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:16:17,980 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-21 14:16:23,560 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-21 14:16:24,208 django.utils.autoreload INFO     Watching for file changes with StatReloader

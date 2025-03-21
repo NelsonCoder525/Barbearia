@@ -6,8 +6,8 @@ from celery import Celery
 from barbearia.celery import app
 from django.core.mail import EmailMessage
 
-@app.task
-def gera_relatorio_prestadores():
+
+def gera_relatorio() -> StringIO:
     output = StringIO()
     writer = csv.writer(output)
     writer.writerow(["Prestador", "Data e Horario", "E-mail Cliente", "Telefone Cliente", "Estado do Agendamento"])
@@ -24,16 +24,26 @@ def gera_relatorio_prestadores():
                 agendamento["telefone_cliente"],
                 agendamento["estado_agendamento"]
             ])
+def envia_email_com_anexo(anexo):
     email = EmailMessage(
         'Relatório de Prestadores',
         'Segue em anexo o relatório de prestadores',
         'nelsonrqj@gmail.com',
         ['nelsonrqj@gmail.com']
     )
-        
-        
-    email.attach("relatorio.csv", output.getvalue(), "text/csv")
+    email.attach("relatorio.csv", anexo.getvalue(), "text/csv")
     email.send()
-    return output.getvalue()
-    #print(output.getvalue())
     
+
+
+@app.task
+def gera_relatorio_prestadores():
+    output = gera_relatorio()
+    envia_email_com_anexo(output)
+    return "Relatório gerado e enviado com sucesso"
+    
+        
+        
+   
+
+   
