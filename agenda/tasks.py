@@ -24,14 +24,17 @@ def gera_relatorio() -> StringIO:
                 agendamento["telefone_cliente"],
                 agendamento["estado_agendamento"]
             ])
+            
+    return output
 def envia_email_com_anexo(anexo):
+    output = anexo
     email = EmailMessage(
         'Relatório de Prestadores',
         'Segue em anexo o relatório de prestadores',
         'nelsonrqj@gmail.com',
         ['nelsonrqj@gmail.com']
     )
-    email.attach("relatorio.csv", anexo.getvalue(), "text/csv")
+    email.attach("relatorio.csv", output.getvalue(), "text/csv")
     email.send()
     
 
