@@ -7,6 +7,8 @@ from django.contrib.auth.models import User
 from requests.auth import HTTPBasicAuth
 from datetime import datetime, timedelta, timezone, date
 from unittest import mock
+from django.core import mail
+
 
 # Create your tests here.
 class TestListagemAgendamentos(APITestCase):
@@ -25,7 +27,7 @@ class TestListagemAgendamentos(APITestCase):
         prest = User.objects.first()
         Agendamento.objects.create(
         prestador = prest,
-        data_horario=datetime(2024, 12, 15, 10, 30, 00, tzinfo=timezone.utc),
+        data_horario=datetime(2025, 12, 15, 10, 30, 00, tzinfo=timezone.utc),
         nome_cliente="Cliente Teste",
         email_cliente="teste@gmail.com",
         telefone_cliente= "1334214343",
@@ -34,12 +36,12 @@ class TestListagemAgendamentos(APITestCase):
        
         agendamento_serializado = {
         "id": 1,
-        "data_horario" : "2024-12-15T10:30:00Z",
+        "data_horario" : "2025-12-15T10:30:00Z",
         "nome_cliente" : "Cliente Teste",
         "email_cliente" : "teste@gmail.com",
         "telefone_cliente" : "1334214343",
         "estado_agendamento" : "CO",
-        "prestador": 1         
+        "prestador_nome": "nelsonteste"        
        }
         
         self.client.login(username = "nelsonteste", password = "test525")
@@ -54,10 +56,12 @@ class TestCriacaoAgendamento(APITestCase):
         self.client = Client() 
         self.client.login(username = "nelsonteste", password = "test525")
         
+        
     def test_cria_agendamento(self):
+        prest = User.objects.first()
         agendamento_request_data =  {
         "prestador": 1,
-        "data_horario" : "2024-12-18 10:00:00",
+        "data_horario" : "2025-12-18 10:00:00",
         "nome_cliente" : "Cliente_Teste_estranho",
         "email_cliente" : "teste@gmail.com",
         "telefone_cliente" : "1334214343",
@@ -66,24 +70,25 @@ class TestCriacaoAgendamento(APITestCase):
         
         agendamento_serializado_2 = {
         "id": 1,
-        "data_horario" : "2024-12-18T10:00:00Z",
+        "data_horario" : "2025-12-18T10:00:00Z",
         "nome_cliente" : "Cliente_Teste_estranho",
         "email_cliente" : "teste@gmail.com",
         "telefone_cliente" : "1334214343",
         "estado_agendamento" : "CO",
-        "prestador": 1,
+        "prestador_nome": "nelsonteste",
        }
         
-        response_post = self.client.post("http://127.0.0.1:8000/barber/agendamentos/", agendamento_request_data, format = "json")
+        self.client.post("http://127.0.0.1:8000/barber/agendamentos/", agendamento_request_data, format = "json")
         response_get = self.client.get("http://127.0.0.1:8000/barber/agendamentos/?username=nelsonteste")
         data1 = response_get.json()
         assert data1[0] == agendamento_serializado_2
+        
         
     def test_agendamento_detail_confirmar_agendamento_em_horario_ja_ocupado(self):
         prest = User.objects.first()
         Agendamento.objects.create(
         prestador = prest,    
-        data_horario=datetime(2024, 12, 20, 15, 30, 00, tzinfo=timezone.utc),
+        data_horario=datetime(2025, 12, 19, 15, 30, 00, tzinfo=timezone.utc),
         nome_cliente="Cliente Teste 3",
         email_cliente="teste3@gmail.com",
         telefone_cliente= "1334214343",
@@ -92,7 +97,7 @@ class TestCriacaoAgendamento(APITestCase):
         
         agendamento_request_data =  {
         "prestador": 1,
-        "data_horario" : "2024-12-20 15:30:00",
+        "data_horario" : "2025-12-19 15:30:00",
         "nome_cliente" : "Outro Cliente",
         "email_cliente" : "oc@gmail.com",
         "telefone_cliente" : "1334214343",
@@ -101,12 +106,12 @@ class TestCriacaoAgendamento(APITestCase):
         
         response_post = self.client.post("http://127.0.0.1:8000/barber/agendamentos/", agendamento_request_data, format = "json")
         data = response_post.json()        
-        assert data == {'data_horario': ['Esse horário 2024-12-20 15:30:00+00:00 não está disponível']}
+        assert data == {'data_horario': ['Esse horário 2025-12-19 15:30:00+00:00 não está disponível']}
     
     def test_agendamento_no_domingo(self):
         agendamento_request_data =  {
         "prestador": 1,
-        "data_horario" : "2024-12-15 15:30:00",
+        "data_horario" : "2025-12-21 15:30:00",
         "nome_cliente" : "Outro Cliente",
         "email_cliente" : "oc@gmail.com",
         "telefone_cliente" : "1334214343",
@@ -140,7 +145,7 @@ class TestAgendamentoDetail(APITestCase):
         presta = User.objects.first()        
         Agendamento.objects.create(
         prestador = presta,
-        data_horario=datetime(2024, 12, 15, 9, 30, 00, tzinfo=timezone.utc),
+        data_horario=datetime(2025, 12, 15, 9, 30, 00, tzinfo=timezone.utc),
         nome_cliente="Cliente Teste 2",
         email_cliente="teste@gmail.com",
         telefone_cliente= "1334214343",
@@ -151,12 +156,12 @@ class TestAgendamentoDetail(APITestCase):
         data = response_get_2.json()
         agendamento_serializado_3 = {
         "id": 1,
-        "data_horario" : "2024-12-15T09:30:00Z",
+        "data_horario" : "2025-12-15T09:30:00Z",
         "nome_cliente" : "Cliente Teste 2",
         "email_cliente" : "teste@gmail.com",
         "telefone_cliente" : "1334214343",
         "estado_agendamento": "CO",
-        "prestador": 1         
+        "prestador_nome": "nelsonteste"         
        }
         assert data[0]== agendamento_serializado_3
         
@@ -164,7 +169,7 @@ class TestAgendamentoDetail(APITestCase):
         prest = User.objects.first()
         Agendamento.objects.create(
         prestador = prest,    
-        data_horario=datetime(2024, 12, 20, 15, 30, 00, tzinfo=timezone.utc),
+        data_horario=datetime(2025, 12, 19, 15, 30, 00, tzinfo=timezone.utc),
         nome_cliente="Cliente Teste 3",
         email_cliente="teste3@gmail.com",
         telefone_cliente= "1334214343",
@@ -185,7 +190,7 @@ class TestAgendamentoDetail(APITestCase):
         "email_cliente" : "nelsonr525@gmail.com",
         "telefone_cliente" : "1334214343",
         "estado_agendamento": "CO",
-        "prestador": 1        
+        "prestador_nome": "nelsonteste"      
        }
         response_patch = self.client.patch("http://127.0.0.1:8000/barber/agendamentos/1/", agendamento_request_data1, content_type="application/json")        
         response_get3 = self.client.get("http://127.0.0.1:8000/barber/agendamentos/?username=nelsonteste")
@@ -196,7 +201,7 @@ class TestAgendamentoDetail(APITestCase):
         prest = User.objects.first()
         Agendamento.objects.create(
         prestador = prest,    
-        data_horario=datetime(2024, 12, 20, 15, 30, 00, tzinfo=timezone.utc),
+        data_horario=datetime(2025, 12, 15, 15, 30, 00, tzinfo=timezone.utc),
         nome_cliente="Cliente Teste 3",
         email_cliente="teste3@gmail.com",
         telefone_cliente= "1334214343",
@@ -204,7 +209,7 @@ class TestAgendamentoDetail(APITestCase):
         )       
         
         agendamento_request_data1 =  {        
-        "data_horario" : "2024-12-15T16:30:00Z",
+        "data_horario" : "2025-12-21T16:30:00Z",
        }
        
         response_patch = self.client.patch("http://127.0.0.1:8000/barber/agendamentos/1/", agendamento_request_data1, content_type="application/json")
@@ -215,7 +220,7 @@ class TestAgendamentoDetail(APITestCase):
        prest = User.objects.first()       
        Agendamento.objects.create(
         prestador = prest,
-        data_horario=datetime(2024, 12, 20, 15, 30, 00, tzinfo=timezone.utc),
+        data_horario=datetime(2025, 12, 18, 15, 30, 00, tzinfo=timezone.utc),
         nome_cliente="Cliente Teste 1000",
         email_cliente="teste3@gmail.com",
         telefone_cliente= "1334214343",
@@ -232,11 +237,26 @@ class TestGetHorarios(APITestCase):
     @mock.patch("agenda.libs.brasil_api.is_feriado", return_value=True)
     def test_quando_data_e_horario_e_feriado_retorna_lista_vazia(self, is_feriado_mock):
         response = self.client.get("/barber/horarios/?data=2025-12-20")
-        assert response.json() == ["Feriado, parceiro!"]
+        assert response.json() == ["Feriado, camarada!"]
         
     @mock.patch("agenda.libs.brasil_api.is_feriado", return_value=False)   
     def  test_quando_data_e_horario_e_dia_comum_retorna_lista_com_horarios(self, _):
        response1 = self.client.get("/barber/horarios/?data=2025-12-22")
-       assert response1.json()!= ["Feriado, parceiro!"]
+       assert response1.json()!= ["Feriado, camarada!"]
        assert response1.data[0] == datetime(2025, 12, 22, 9, tzinfo=timezone.utc)
        assert response1.data[-1]== datetime(2025, 12, 22, 17, 30, tzinfo=timezone.utc)
+       
+       
+class TestEnviaEmail(TestCase):
+    def test_envia_email(self):
+        mail.send_mail(
+           'Assunto teste',
+           'Mensagem teste',
+           'eu@teste.com',
+           ['voce@teste.com'],
+           fail_silently=False 
+           )
+        self.assertEqual(len(mail.outbox), 1)
+        self.assertEqual(mail.outbox[0].subject, 'Assunto teste')
+    
+        
