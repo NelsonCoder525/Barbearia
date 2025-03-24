@@ -4647,3 +4647,27 @@ def accumulate(self, *args, **kwargs):
 2025-03-22 15:20:19,955 root         INFO     Requisição não está sendo feita pois TESTING = True
 2025-03-22 15:20:20,976 django.request WARNING  Bad Request: /barber/agendamentos/
 2025-03-22 15:20:20,993 django.request WARNING  Bad Request: /barber/horarios/
+2025-03-22 16:25:51,374 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-22 16:28:15,138 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-22 16:28:15,822 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-22 16:28:22,629 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\agenda\tasks.py changed, reloading.
+2025-03-22 16:28:23,413 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-24 17:02:38,375 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-24 17:08:16,690 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\prod.py changed, reloading.
+2025-03-24 17:08:17,599 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-24 17:08:22,324 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\prod.py changed, reloading.
+2025-03-24 17:08:23,069 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-24 17:08:45,651 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\prod.py changed, reloading.
+2025-03-24 17:08:46,381 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-24 17:08:56,573 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\prod.py changed, reloading.
+2025-03-24 17:08:57,255 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-24 17:08:59,561 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\prod.py changed, reloading.
+2025-03-24 17:09:00,225 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-24 17:09:03,790 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\prod.py changed, reloading.
+2025-03-24 17:09:04,446 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-24 17:09:27,044 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\prod.py changed, reloading.
+2025-03-24 17:09:27,740 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-24 17:11:18,478 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\prod.py changed, reloading.
+2025-03-24 17:11:19,129 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2025-03-24 17:11:24,742 django.utils.autoreload INFO     E:\Documentos\PYTHON\barber_shop\barbearia\settings\prod.py changed, reloading.
+2025-03-24 17:11:25,521 django.utils.autoreload INFO     Watching for file changes with StatReloader

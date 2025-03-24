@@ -18,7 +18,7 @@ def gera_relatorio() -> StringIO:
     for prestador in serializer.data:
         for agendamento in prestador["agendamentos"]:
             writer.writerow([
-                agendamento["prestador"], 
+                agendamento["prestador_nome"], 
                 agendamento["data_horario"],
                 agendamento["email_cliente"],
                 agendamento["telefone_cliente"],
