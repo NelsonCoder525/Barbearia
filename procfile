@@ -1,0 +1,3 @@
+release: python manage.py migrate
+worker: celery -A barbearia worker -Q celery --loglevel=INFO --pool=solo
+web: gunicorn barbearia.wsgi
